@@ -1,0 +1,26 @@
+.title-1::before {
+  content: "";
+  color: "blue";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: 70px;
+  width: 0.5em;
+  border-left: 0.4em solid rgb(72, 174,221);
+}
+.title-2::before {
+    content: "";
+    color: "black";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    bottom: 5px;
+    width: 0.2em;
+    border-left: 0.25em solid rgb(72, 174,221);
+  }
+  #about-us :any-link{
+    padding: 5px;
+    font-size: larger;
+    color: rgb(72, 174,221);
+    text-decoration: none;
+  }
