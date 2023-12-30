@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from './Components/Navbar/navbar'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from './Components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,8 +17,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         
         <Navbar/>
-        
         {children}
+        <Footer/>
       </body>
 
     </html>
