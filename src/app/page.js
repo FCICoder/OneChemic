@@ -1,4 +1,3 @@
-import { imageOptimizer } from "next/dist/server/image-optimizer";
 import styles from "./page.module.css";
 import Content from "./Home/page.jsx";
 import ContactLink from "./Components/Contact-link/Contact-link";
