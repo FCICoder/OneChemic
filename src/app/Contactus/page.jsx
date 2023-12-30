@@ -37,7 +37,7 @@ export default function page() {
                             <i className='fa fa-phone me-2'></i>
                             +20 10 22 64 1805
                         </p>
-                        <i className='fas fa-envelope me-2 '></i>
+                        <i className='fas fa-envelope me-2 text-muted '></i>
                         <a href="mailto:info@onechemic.com" className='text-decoration-none text-muted '>
                             info@onechemic.com</a>
                     </div>

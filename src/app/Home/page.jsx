@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import ShopNowCard from '../Components/ShopNowCard/ShopNowCard';
+import styles from './home.module.css'
+import factory from "../about-us/factory.jpg";
+import ImageGallery from "../Components/Gallery/Gallery";
 
 export default function Content() {
   const cards = [
@@ -25,10 +28,10 @@ export default function Content() {
       imgURL:'https://bdcinternational.com/content/uploads/2021/09/group-123-1.png',
       title:"A wide range of BDC products."
     },
-    {
-      imgURL:'https://bdcinternational.com/content/uploads/2021/12/obszar-kompozycji-13-1400x793.jpg',
-      title:'BDC drilling chemicals'
-    },
+    // {
+    //   imgURL:'https://bdcinternational.com/content/uploads/2021/12/obszar-kompozycji-13-1400x793.jpg',
+    //   title:'BDC drilling chemicals'
+    // },
     {
       imgURL:'https://bdcinternational.com/content/uploads/2022/03/proszek-1-1400x700.jpg',
       title:'Laboratory testing of drilling fluids'
@@ -50,6 +53,30 @@ export default function Content() {
       title:'METHYLENE CHLORIDE formula'
     },
 
+  ];
+  const images = [
+    {
+      url: factory.src,
+      description: "Best drilling chemicals",
+      desc:`
+      We don’t just sell chemical products – we create effective solutions. 
+      We save our clients’ time and increase the safety of the work carried out.
+      `
+    },
+    {
+      url: "https://bdcinternational.com/content/uploads/2021/09/group-123-1.png",
+      description: 'Product for drilling',
+      desc:'BDC drilling products arose from our experience and practical knowledge of drilling work. The BDC technology meets the highest quality control standards. Our long-term presence on the market and successfully completed engineering challenges'
+    },
+    {
+      url: "https://bdcinternational.com/content/uploads/2021/12/istock-1309776274-1-1400x682.jpg",
+      description: "Unique original recipes",
+      desc:`
+      Each technical issue is carefully analyzed by our specialists,
+       and recipes are created for individual engineering challenges. 
+      This is how we ensure that our clients are certain that the solution presented to them is best suited to their working conditions.
+      `
+    },
   ];
   return <>
       <div className="d-flex flex-column gap-4 align-items-center w-100 mt-1" >
@@ -101,6 +128,41 @@ export default function Content() {
         </div>
     </div>
     </div>
+
+    <section>
+          <div className="shadow p-3 mb-2 bg-white rounded">
+            <ImageGallery images={images} />
+            <div className='container'>
+                    <Link className='text-decoration-none' href='../Contactus' >
+                    CONTACT US <i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
+                    </Link>
+            </div>
+          </div>
+          
+        </section>
+
+    <section className={`${styles.infoSection}`} >
+          <div className="my-1 py-2  container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
+            <div className="w-100 p-3  text-center pt-5" style={{height:'500px'}}>
+              <img
+                className=" " style={{}}
+                src="https://bdcinternational.com/content/uploads/2022/03/bdc_uslugi-1-1400x700.jpg"
+                alt=""
+              />
+            </div>
+            <div className={` p-4 ${styles.content}`}>
+              <h2>Services tailored to your needs</h2>
+              <p className='text-muted'>
+              Our solutions have already been proven at many projects in various conditions.
+               Because of that, we are certain that we offer the best possible products and services.
+                We are ready for new challenges. Our team and laboratories will undertake any project, 
+                even an extremely challenging and different from any previous job.
+                </p>
+                 
+             
+            </div>
+          </div>
+        </section>
     </>
 
 }

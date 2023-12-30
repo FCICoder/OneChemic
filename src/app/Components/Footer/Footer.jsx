@@ -94,7 +94,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
         }}>
-        <i class="fa-solid fa-circle-arrow-up fs-4 px-1"></i>
+        <i className="fa-solid fa-circle-arrow-up fs-4 px-1"></i>
           <span className={`${fStyle.responsiveLink} fs-6`}>Back to top</span>
         </div>
       </div>

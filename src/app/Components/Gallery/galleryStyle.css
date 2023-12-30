@@ -31,6 +31,12 @@
   right: 7%;
   height: fit-content;
 }
+
+#paginate-buttons > button:hover {
+  border: 1px solid #5b56ee !important;
+  border-radius: 50% !important;
+}
+
 #paginate-buttons > button:hover > i {
     color: #5b56ee;
   }

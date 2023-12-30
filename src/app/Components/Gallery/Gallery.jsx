@@ -30,22 +30,19 @@ const ImageGallery = ({ images }) => {
         {currentImages.map((image, index) => (
           <div key={index}  id="myContainer">
             <div id="image-container">
-              <img src={image.url} alt={image.description} className="img-fluid" />
+              <img src={image.url} alt={image.description} className="img-fluid "  />
             </div>
             <div id="image-desc">
               <p className="d-block text-bold fs-2">{image.description}</p>
               <p>
-                Our solutions find application not only in big corporations but
-                also in small family companies that need chemistry for well
-                drilling, coring, engineering and drilling operations including
-                geothermal installations.
+               {image.desc}
               </p>
             </div>
           </div>
         ))}
         <div  id="paginate-buttons" style={{paddingLeft:'18%'}}>
           <button
-            className="mx-1 my-1 rounded-circle btn border-dark p-auto fs-2 lh-1"
+            className="mx-1 my-1 border-0 btn p-auto fs-2 lh-1"
             onClick={handlePrevPage}
             disabled={currentPage === 1}
           >
@@ -54,7 +51,7 @@ const ImageGallery = ({ images }) => {
             ></i>
           </button>
           <button
-            className="mx-1 my-1 rounded-circle  btn bg-light border-dark p-auto fs-2 lh-1"
+            className="mx-1 my-1 border-0  btn bg-light  p-auto fs-2 lh-1"
             onClick={handleNextPage}
             disabled={endIndex >= images.length}
           >
