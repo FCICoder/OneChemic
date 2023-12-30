@@ -196,7 +196,7 @@ const Page = () => {
         <section>
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className=" p-3">
-              <div className="px-2 py-1 position-relative fw-bold title-2 fs-3">
+              <div className="px-4 py-1 position-relative fw-bold title-2 fs-3">
                 <span>OneChemic. A global brand.</span>
               </div>
 

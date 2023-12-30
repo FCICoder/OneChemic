@@ -22,8 +22,8 @@ export default function page() {
         <section id='contactUs' className='mt-5'>
             <div className="row container m-auto">
                 <div className="col-md-5">
-                    <h2 className={`${style.title} `} style={{fontWeight:'700'}}>Contact US</h2>
-                    <div className={`${style.leftContent} `}>
+                    <h2 className={`${style.title} ms-3`} style={{fontWeight:'700'}}>Contact US</h2>
+                    <div className={`${style.leftContent} mb-4`}>
                         <h3>Onechemic Egypt. </h3>
                         <p className='text-muted mt-3 mb-1' >
                             <i className=' fas fa-location-dot me-2'></i>
@@ -33,7 +33,7 @@ export default function page() {
                         </p>
                     </div>
                     <div className={`${style.leftContent} mt-0 `}>
-                        <p className='text-muted mb-1' >
+                        <p className='text-muted mb-4 ' >
                             <i className='fa fa-phone me-2'></i>
                             +20 10 22 64 1805
                         </p>
