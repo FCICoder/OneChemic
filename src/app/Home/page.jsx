@@ -17,8 +17,8 @@ export default function Content() {
                      We have obtained these results by taking utmost care of every single ingredient.</p>
             
             <div>
-                    <Link className='text-decoration-none' href='../Aboutus' >
-                    ABOUT US <i class="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
+                    <Link className='text-decoration-none' href='../about-us' >
+                    ABOUT US <i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
                     </Link>
             </div>
             </div>

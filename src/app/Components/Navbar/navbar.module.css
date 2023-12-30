@@ -1,0 +1,43 @@
+.nav{
+    background-color: rgb(12, 170, 220) !important;
+}
+
+.nav  ul  li  {
+    text-transform: uppercase !important;
+    color: aliceblue !important;
+    
+}
+
+.nav_link{
+    color: aliceblue !important;
+    text-decoration: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center !important;
+    padding: 10px;
+    transition: all .8s ;
+}
+
+.active  {
+    background-color: rgb(58, 60, 133 , .7);
+    color: white !important;
+    border-radius: 20px;
+    
+}
+
+.image  {
+    width: 60px !important ;
+}
+
+.image Link  {
+    opacity: .8 !important;
+}
+
+.navbar_nav{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+}
