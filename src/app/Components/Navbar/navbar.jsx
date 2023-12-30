@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
 
 export default function Navbar() {
   return (
