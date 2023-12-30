@@ -9,7 +9,7 @@
 
 
 .responsiveText {
-    color: whitesmoke;
+    color:  rgb(12, 170, 220);
   font-size: 2.5vw;
 }
 
@@ -19,7 +19,7 @@ color: rgb(202, 198, 198);
   font-size: 1.8vw;
 }
 .responsiveLink:hover {
-    color: rgb(73, 73, 73);
+    color: rgb(121, 117, 165);
 
     }
 @media only screen and (max-width: 768px) {

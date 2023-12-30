@@ -76,28 +76,12 @@ const Footer = () => {
           </div>
           <div className="col-md-4  col-6 ">
             <h1 className={`${fStyle.responsiveText}`}>headquarters</h1>
-            <ul className="list-unstyled">
-              <li>
-                <Link href="#" className={`${fStyle.responsiveLink}`}>
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${fStyle.responsiveLink}`}>
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${fStyle.responsiveLink}`}>
-                  Contact us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${fStyle.responsiveLink}`}>
-                  OneChemic
-                </Link>
-              </li>
-            </ul>
+            <p className={`${fStyle.responsiveLink} mt-3 mb-1`}  >
+                            <i className=' fas fa-location-dot me-2'></i>
+                            Alexandria agricultural Slow Road,<br />
+                            Qalyoub
+                            Qalyoubia,<br /> Egypt.
+                        </p>
           </div>
         </div>
       </div>

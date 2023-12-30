@@ -20,7 +20,7 @@ export default function page() {
     })
     return <>
         <section id='contactUs' className='mt-5'>
-            <div className="row container m-auto">
+            <div className="row container m-auto mb-2">
                 <div className="col-md-5">
                     <h2 className={`${style.title} ms-3`} style={{fontWeight:'700'}}>Contact US</h2>
                     <div className={`${style.leftContent} mb-4`}>

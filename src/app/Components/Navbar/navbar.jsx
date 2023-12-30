@@ -9,7 +9,7 @@ import { usePathname, useRouter } from 'next/navigation';
 export default function Navbar() {
   const router = usePathname();
   return <>
-    <section className='container-fluid'>
+    <section >
       <nav
         className={`navbar navbar-expand-sm navbar-light ${styles.nav}`} >
         <div className="container">
