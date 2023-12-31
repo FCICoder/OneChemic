@@ -3,7 +3,7 @@ import React from 'react'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import styles from './navbar.module.css'
 import Image from 'next/image'
-import img from '../../../../assets/One Chmeic Logo.jpg'
+import img from '../../../../assets/One Chmeic Logo.png'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
 export default function Navbar() {

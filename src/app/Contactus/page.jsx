@@ -3,6 +3,7 @@ import React from 'react'
 import style from './page.module.css'
 import { useFormik } from 'formik'
 import * as  Yup from 'yup' 
+import { Helmet } from 'react-helmet'
 export default function page() {
     let validateSchema = Yup.object({
         name:Yup.string().min(5,'minimum 5 character').required('your name is required'),
@@ -19,6 +20,11 @@ export default function page() {
 
     })
     return <>
+    <Helmet>
+        <title>
+            Contact us
+        </title>
+    </Helmet>
         <section id='contactUs' className='mt-5'>
             <div className="row container m-auto mb-2">
                 <div className="col-md-5">

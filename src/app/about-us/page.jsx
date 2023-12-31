@@ -1,9 +1,11 @@
+'use client'
 import React from "react";
 import ImageGallery from "../Components/Gallery/Gallery";
 import "./aboutStyle.css";
 import Link from "next/link";
 import parol from "../about-us/2w.jpg";
 import factory from "../about-us/factory.jpg";
+import { Helmet } from "react-helmet";
 
 const Page = () => {
   const images = [
@@ -22,6 +24,11 @@ const Page = () => {
   ];
   return (
     <>
+    <Helmet>
+        <title>
+            About us
+        </title>
+    </Helmet>
       <div className="container" id="about-us">
         <section>
           <div className="row m-0 p-1 shadow p-3 mb-1 bg-white rounded ">
