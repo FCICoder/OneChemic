@@ -1,9 +1,11 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 import ShopNowCard from '../Components/ShopNowCard/ShopNowCard';
 import styles from './home.module.css'
 import factory from "../about-us/factory.jpg";
 import ImageGallery from "../Components/Gallery/Gallery";
+import { Helmet } from 'react-helmet';
 
 export default function Content() {
   const cards = [
@@ -79,6 +81,11 @@ export default function Content() {
     },
   ];
   return <>
+  <Helmet>
+        <title>
+            One Chemics
+        </title>
+    </Helmet>
       <div className="d-flex flex-column gap-4 align-items-center w-100 mt-1" >
        {/* Grid */}
      <div className="row d-flex w-100 justify-content-center ">
