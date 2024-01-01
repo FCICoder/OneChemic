@@ -41,7 +41,7 @@ var myLang=lng
               <ul className={`${styles.navbar_nav} me-auto mt-2 mt-lg-0`}>
                 <li className="nav-item">
                   <Link
-                    className={`${router == "/" ? `${styles.active}` : ""} ${
+                    className={`${router == `/${lng}` ? `${styles.active}` : ""} ${
                       styles.nav_link
                     } `}
                     href="/"
@@ -53,7 +53,7 @@ var myLang=lng
                 <li className="nav-item">
                   <Link
                     className={`${
-                      router == "/about-us" ? `${styles.active}` : ""
+                      router == `/${lng}/about-us` ? `${styles.active}` : ""
                     } ${styles.nav_link}`}
                     href={`/${lng}/about-us`}
                   >
@@ -63,7 +63,7 @@ var myLang=lng
                 <li className="nav-item">
                   <Link
                     className={`${
-                      router == "/Contactus" ? `${styles.active}` : ""
+                      router == `/${lng}/Contactus` ? `${styles.active}` : ""
                     } ${styles.nav_link}`}
                     href={`/${lng}/Contactus`}
                   >
