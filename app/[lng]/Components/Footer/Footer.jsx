@@ -13,16 +13,13 @@ export const Footer = async ({ lng }) => {
   return (
     <div style={{ backgroundColor: "#1f44ab" }}>
       <footer style={{ marginTop: 50 }} className="text-center">
-        <Trans i18nKey="languageSwitcher" t={t}>
-          Switch from <strong>{{ lng }}</strong> to:{" "}
-        </Trans>
         {languages
           .filter((l) => lng !== l)
           .map((l, index) => {
             return (
               <span key={l}>
                 {index > 0 && " or "}
-                <Link href={`/${l}`}>{l}</Link>
+                <Link className="text-dark fs-3 text-decoration-none" href={`/${l}`}>{lng=='ar'?"Browse in English ":" تصفح بالعربية"}</Link>
               </span>
             );
           })}
