@@ -9,8 +9,6 @@ export default async function Home({ params: { lng } }) {
 
   return (
     <div>
-      <h1>{t("title")}</h1>
-      <Link href={`/${lng}/about-us`}>{t("to-second-page")}'''''''''</Link>
       <Content lng={lng}/>
     </div>
   );

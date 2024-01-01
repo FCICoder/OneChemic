@@ -1,6 +1,7 @@
 .titleLogo::before {
     content: '';
     position: absolute;
+    top: 10%;
     left: 8.5%;
     width: 4px;
     height: 60px;

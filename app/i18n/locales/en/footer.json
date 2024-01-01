@@ -1,5 +1,20 @@
 {
-  "languageSwitcher": "Switch from <1>{{lng}}</1> to: ",
-  "title1": "our Products",
-  "test": "working"
+  "part1": "Discover",
+  "part2": "our Products",
+  "part3": "About us",
+  "part4": "Contact us",
+  "part5": "OneChemic",
+  "part6": "contents",
+  "part7": "Solvents",
+  "part8": "Polymers",
+  "part8.1":"Chemical Additives",
+  "part8.2":"and Processing Aids",
+  "part9": "headquarters",
+  "part10": "Alexandria agricultural Slow Road,",
+  "part11": "Qalyoub",
+  "part12": "Qalyoubia,",
+  "part13": "Egypt.",
+  "part14": "© 2024 OneChemic",
+  "part15":"OneChemic",
+  "part16":"  since 2012"
 }
