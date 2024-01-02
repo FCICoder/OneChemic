@@ -42,7 +42,7 @@ var myLang=lng
                     className={`${router == `/${lng}` ? `${styles.active}` : ""} ${
                       styles.nav_link
                     }  `}
-                    href="/"
+                    href={`/${lng}`}
                   >
                    {(myLang=='en')?"Home":"الصفحة الرئيسيه"}
                    {/* {t('navbar.part1')} */}

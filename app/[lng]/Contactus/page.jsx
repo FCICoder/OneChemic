@@ -10,14 +10,14 @@ export default  function Page({ params: { lng }}) {
 
   let validateSchema = Yup.object({
     name: Yup.string()
-      .min(5, "minimum 5 character")
-      .required("your name is required"),
+      .min(5, (lng == 'en') ?"minimum 5 character":"اقل عدد من الحروف هو خمسه")
+      .required((lng == 'en')?"your name is required":'خانة الاسم مطلوبه' ),
     email: Yup.string()
       .email("is invalid email")
-      .required("your email is required"),
+      .required((lng=='en')?"your email is required":'خانة البريد الالكتروني مطلوبه'),
     message: Yup.string()
-      .min(5, "minimum 5 character")
-      .required("your message is required"),
+      .min(5, (lng== 'en')?"minimum 5 character": 'اقل عدد من الحروف هو خمسه')
+      .required((lng=='en')?"your message is required":'خانة الرساله مطلوبه'),
   });
   const formik = useFormik({
     initialValues: {
@@ -35,7 +35,7 @@ export default  function Page({ params: { lng }}) {
       <section id="contactUs" className="mt-5">
         <div className="row container m-auto mb-2">
           <div className="col-md-5">
-            <h2 className={`${style.title} ms-3`} style={{ fontWeight: "700" }}>
+            <h2 className={`${style.title} ms-2`} style={{ fontWeight: "700" }}>
               {(myLang==='en')?"Contact US":"اتصل بنا"}
             </h2>
             <div className={`${style.leftContent} mb-4`}>

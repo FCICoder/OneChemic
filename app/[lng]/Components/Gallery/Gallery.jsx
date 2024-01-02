@@ -1,6 +1,4 @@
-// components/ImageGallery.js
 "use client";
-// components/ImageGallery.js
 import { useState } from "react";
 import "./galleryStyle.css";
 
