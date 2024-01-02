@@ -6,14 +6,10 @@ import parol from "../../../assets/2w.jpg";
 import factory from "../../../assets/factory1.jpg";
 import { useTranslation } from "../../i18n";
 import ContactLink from "../Components/Contact-link/Contact-link";
-// export async function generateMetadata(){
-//  const t =await useTranslation()
-//  return{
-//   title:t('about-title')
-//  }
 
-// }
-
+export const metadata = {
+  title: 'about us',
+}
 export default async function Page({ params: { lng } }) {
   const { t } = await useTranslation(lng, "about-us");
 
@@ -40,7 +36,9 @@ export default async function Page({ params: { lng } }) {
   ];
   return (
     <>
+  
       <div className="container" id="about-us">
+        
         <section>
           <div className="row m-0 p-1 shadow p-3 mb-1 bg-white rounded ">
             <div className="col-md-5 pt-1">
@@ -58,7 +56,7 @@ export default async function Page({ params: { lng } }) {
         </section>
         <section>
           <div className="shadow p-3 mb-2 bg-white rounded">
-            <ImageGallery images={images} />
+            <ImageGallery images={images} lng={lng}/>
           </div>
         </section>
         <section>
@@ -115,17 +113,8 @@ export default async function Page({ params: { lng } }) {
             <div className="   p-3">
               <h4>{t("part21")}</h4>
               <p>{t("part22")}</p>
-              <p>
-                {t("part23")}
-              
-              </p>{" "}
-              <p>
-                {t("part24")}
-               
-              </p>
-              <p>
-                {t("part25")} 
-              </p>
+              <p>{t("part23")}</p> <p>{t("part24")}</p>
+              <p>{t("part25")}</p>
             </div>
           </div>
         </section>
@@ -138,7 +127,7 @@ export default async function Page({ params: { lng } }) {
 
               <p>
                 <span className="fs-4">{t("part27")}</span>
-                {t("part28")} 
+                {t("part28")}
               </p>
             </div>
             <div className="w-100    p-3">
