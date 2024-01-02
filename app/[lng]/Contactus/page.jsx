@@ -3,7 +3,6 @@ import React from "react";
 import style from "./page.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import Link from "next/link";
 import { Helmet } from "react-helmet";
 export default  function Page({ params: { lng }}) {
   var myLang=lng;
