@@ -1,10 +1,8 @@
-// components/ImageGallery.js
 "use client";
-// components/ImageGallery.js
 import { useState } from "react";
 import "./galleryStyle.css";
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images , lng }) => {
   const itemsPerPage = 1;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -46,18 +44,23 @@ const ImageGallery = ({ images }) => {
             onClick={handlePrevPage}
             disabled={currentPage === 1}
           >
-            <i
+            
+              
+            {(lng == 'en' )? <i
               className="fa-solid fa-arrow-left fa-xs"
-            ></i>
+            ></i> :<i className="fa-solid fa-arrow-right fa-xs"
+            ></i> }
           </button>
           <button
-            className="mx-1 my-1 border-0  btn bg-light  p-auto fs-2 lh-1"
+            className="mx-1 my-1 border-0  btn   p-auto fs-2 lh-1"
             onClick={handleNextPage}
             disabled={endIndex >= images.length}
           >
-            <i
+            {(lng == 'en' )?<i
               className="fa-solid fa-arrow-right fa-xs"
-              ></i>
+              ></i> :<i
+              className="fa-solid fa-arrow-left fa-xs"
+            ></i> }
           </button>
         </div>
       </div>

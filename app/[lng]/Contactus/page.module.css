@@ -1,7 +1,7 @@
 .title::before {
     content: '';
     position: absolute;
-    left: 8.5%;
+    left: 3%;
     width: 4px;
     height: 40px;
     background-color: rgb(72, 174, 221);

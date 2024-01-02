@@ -62,25 +62,43 @@ export default async function Content( { lng } ) {
   const images = [
     {
       url: factory.src,
-      description: "Best drilling chemicals",
-      desc:`
+      description: (lng=='en')?`Best drilling chemicals` :`أفضل كيماويات الحفر`,
+      desc:(lng=='en')?`
       We don’t just sell chemical products – we create effective solutions. 
       We save our clients’ time and increase the safety of the work carried out.
+      ` :`نحن لا نبيع المنتجات الكيميائية فحسب، بل نبتكر حلولاً فعالة.
+      نحن نوفر وقت عملائنا ونزيد من سلامة العمل المنجز.
       `
     },
     {
       url: "https://bdcinternational.com/content/uploads/2021/09/group-123-1.png",
-      description: 'Product for drilling',
-      desc:'BDC drilling products arose from our experience and practical knowledge of drilling work. The BDC technology meets the highest quality control standards. Our long-term presence on the market and successfully completed engineering challenges'
+      description: (lng=='en')?`WHAT WE DOFOR YOU?` :`ماذا نقدم لك ؟`,
+      desc:
+      (lng=='en')?`
+      Embarking on a transformative partnership with OneChemic
+opens the door to a comprehensive array of services designed to
+elevate your business in the dynamic landscape of chemical raw
+materials. Our commitment extends far beyond the mere act of
+importation; it is a pledge to be your steadfast ally in the pursuit of
+success` :
+      `الشروع في شراكة تحويلية مع OneChemic
+      يفتح الباب أمام مجموعة شاملة من الخدمات المصممة ل
+      ارفع مستوى عملك في المشهد الديناميكي للمواد الكيميائية الخام
+      مواد. إن التزامنا يمتد إلى ما هو أبعد من مجرد الفعل
+      استيراد؛ إنه تعهد بأن تكون حليفك الثابت في السعي لتحقيق ذلك
+      نجاح `
+    
     },
     {
       url: "https://bdcinternational.com/content/uploads/2021/12/istock-1309776274-1-1400x682.jpg",
-      description: "Unique original recipes",
-      desc:`
+      description:(lng=='en')?`Unique original recipes` :`وصفات أصلية فريدة من نوعها`,
+      desc:(lng=='en')?`
       Each technical issue is carefully analyzed by our specialists,
        and recipes are created for individual engineering challenges. 
       This is how we ensure that our clients are certain that the solution presented to them is best suited to their working conditions.
-      `
+         ` :`يتم تحليل كل مشكلة فنية بعناية من قبل المتخصصين لدينا،
+         ويتم إنشاء وصفات للتحديات الهندسية الفردية.
+        هذه هي الطريقة التي نضمن بها أن عملائنا على يقين من أن الحل المقدم لهم هو الأنسب لظروف عملهم.`
     },
   ];
   return <>
@@ -114,16 +132,16 @@ export default async function Content( { lng } ) {
             <div className='row '>
             <div className='col-md-5'>
                 <div className='  border-start  border-2  border-primary'>
-                <p className='h4 ms-5 pt-1 pb-4'>Tradition meets modernity {t('home.part1')}</p>
+                <p className='h4 ms-5 pt-1 pb-4'>{(lng=='en')? 'Tradition meets modernity':'التقليد يلتقي بالحداثة'} </p>
                 </div>
             </div>
             <div className='col-md-7'>
-                <p className='text-muted'>We have created a comprehensive drilling fluid system in which the chemicals complement each other in such a way as to achieve the maximum possible field efficiency.
-                     We have obtained these results by taking utmost care of every single ingredient.</p>
+                <p className='text-muted'></p>
+                     {t('home.part1')}
             
             <div>
                     <Link className='text-decoration-none' href='../about-us' >
-                    ABOUT US <i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
+                    {(lng=='en')?'ABOUT US':'نبذه عنا'} <i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
                     </Link>
             </div>
             </div>
@@ -136,10 +154,10 @@ export default async function Content( { lng } ) {
 
     <section>
           <div className="shadow p-3 mb-2 bg-white rounded">
-            <ImageGallery images={images} />
+            <ImageGallery images={images} lng={lng} />
             <div className='container'>
                     <Link className='text-decoration-none' href='../Contactus' >
-                    CONTACT US <i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
+                    {(lng=='en')?'CONTACTUS':'تواصل معنا'}<i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
                     </Link>
             </div>
           </div>
@@ -156,12 +174,9 @@ export default async function Content( { lng } ) {
               />
             </div>
             <div className={` p-4 ${styles.content}`}>
-              <h2>Services tailored to your needs</h2>
+              <h2>{(lng=='en')?'Services tailored to your needs':'خدمات مصممة خصيصا لاحتياجاتك'}</h2>
               <p className='text-muted'>
-              Our solutions have already been proven at many projects in various conditions.
-               Because of that, we are certain that we offer the best possible products and services.
-                We are ready for new challenges. Our team and laboratories will undertake any project, 
-                even an extremely challenging and different from any previous job.
+              {t('home.part2')}
                 </p>
                  
              

@@ -12,7 +12,8 @@
     color: aliceblue !important;
     text-decoration: none;
     display: flex;
-    /* justify-content: center; */
+
+    justify-content: center;
     align-items: center !important;
     padding: 7px;
     transition: all .8s ;
@@ -30,14 +31,14 @@
     width: 60px !important ;
 }
 
-.image Link  {
+/* .image Link  {
     opacity: .8 !important;
-}
+} */
 
 .navbar_nav{
     display: flex;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     margin-top: 5px !important;
     margin-bottom: 0 !important;
