@@ -35,6 +35,8 @@ const Page = ({ params: { lng } }) => {
                     {lng === "en" ? (
                       <>
                         <h5 className="card-title">{item.en.title}</h5>
+                        {/* <p className="card-title">{item.en.description}</p> */}
+
                         {/* <p dangerouslySetInnerHTML={{ __html: item.en.test }} /> */}
 
                       </>
