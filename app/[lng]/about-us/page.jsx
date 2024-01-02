@@ -2,9 +2,9 @@ import React from "react";
 import ImageGallery from "../Components/Gallery/Gallery";
 import "./aboutStyle.css";
 import Link from "next/link";
-import parol from "./2w.jpg";
-import factory from "./factory.jpg";
-import { useTranslation } from '../../i18n'
+import parol from "../../../assets/2w.jpg";
+import factory from "../../../assets/factory1.jpg";
+import { useTranslation } from "../../i18n";
 import ContactLink from "../Components/Contact-link/Contact-link";
 // export async function generateMetadata(){
 //  const t =await useTranslation()
@@ -14,22 +14,28 @@ import ContactLink from "../Components/Contact-link/Contact-link";
 
 // }
 
-export default async function  Page({ params: { lng } }) {
-  const { t } = await useTranslation(lng, 'about-us')
-
+export default async function Page({ params: { lng } }) {
+  const { t } = await useTranslation(lng, "about-us");
 
   const images = [
     {
       url: factory.src,
-      description: "Description 1",
+      description: lng == "en" ? "Our foundation" : "مؤسستنا",
+      desc:
+        lng == "en"
+          ? "Our foundation rests on a dedication to excellence, making us the go-to supplier for factories and distributors in Egypt. With a steadfast belief in reliability and customer satisfaction, OneChemic stands as a testament to a decade of  unwavering commitment to our clients and the chemical industry"
+          : "مؤسستنا تقع على التفاني في التميز، مما يجعلنا المورد المفضل للمصانع و الموزعين في مصر. مع الإيمان الراسخ بالموثوقية والعملاء الرضا، تقف شركة OneChemic بمثابة شهادة على عقد من الزمن  التزام لا يتزعزع تجاه عملائنا والصناعة الكيميائية",
     },
     {
       url: "https://bdcinternational.com/content/uploads/2022/03/szyte_na_miare-e1648642841245-1400x934.jpg",
-      description: "Description 2",
-    },
-    {
-      url: "https://bdcinternational.com/content/uploads/2022/03/oil_drilling.jpg",
-      description: "Description 3",
+      description:
+        lng == "en"
+          ? "Made-to-measure solutions for enterprises."
+          : "حلول مخصصة للمؤسسات.",
+      desc:
+        lng == "en"
+          ? "our team is poised to explore and secure the exact chemical solution your business demands. This flexibility is coupled with a commitment to personalized customer service — an assurance that yourindividual requirements will be met with precision and care"
+          : "فريقنا هو على استعداد لاستكشاف وتأمين الحل الكيميائي الدقيق الخاص بك  متطلبات العمل. وتقترن هذه المرونة بالالتزام لخدمة العملاء الشخصية - ضمان أن الخاص بك سيتم تلبية المتطلبات الفردية بدقة وعناية",
     },
   ];
   return (
@@ -39,24 +45,14 @@ export default async function  Page({ params: { lng } }) {
           <div className="row m-0 p-1 shadow p-3 mb-1 bg-white rounded ">
             <div className="col-md-5 pt-1">
               <div className="px-4 py-1 position-relative fw-bold title-1">
-               {t('about-us.part1')} <p className="fs-3 " style={{ overflow: "hidden" }}>
+                <p className="fs-3 " style={{ overflow: "hidden" }}>
+                  {t("part1")}
+                  <span className="d-flex">{t("part2")}</span>
                 </p>
               </div>
             </div>
             <div className="col-md-7">
-              <p className="text-muted p-2">
-                Welcome to OneChemic, your premier partner in the chemical raw
-                materials industry. Established in 2012, our journey began with
-                a commitment to providing unparalleled quality and service to
-                the Egyptian market. Over nearly a decade, we have evolved into
-                a trusted name, sourcing top-tier materials globally from China,
-                Korea, Turkey, Brazil, India, and the European Union. Our
-                foundation rests on a dedication to excellence, making us the
-                go-to supplier for factories and distributors in Egypt. With a
-                steadfast belief in reliability and customer satisfaction,
-                OneChemic stands as a testament to a decade of unwavering
-                commitment to our clients and the chemical industry
-              </p>
+              <p className="text-muted p-2">{t("part3")}</p>
             </div>
           </div>
         </section>
@@ -68,28 +64,11 @@ export default async function  Page({ params: { lng } }) {
         <section>
           <div className="my-1    container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className="ps-2 py-2">
-              <h2>Why OneChemic?</h2>
-              <p>
-                Direct Imports: We cut out the middlemen to bring you products
-                directly from reputable suppliers in China, India, Turkey, and
-                the European Union
-              </p>
-              <p>
-                Highest Quality: Our commitment to excellence means we only deal
-                in products of the highest standards, meeting and exceeding
-                industry expectations.
-              </p>
-              <p>
-                Best Prices: By establishing strong partnerships with
-                international suppliers, we secure competitive prices, allowing
-                you to optimize your budget without compromising quality
-              </p>
-              <p className="text-muted">
-                Join the countless businesses that have elevated their
-                operations with [Your Company Name]. Trust us for unrivaled
-                quality, direct imports, and unbeatable prices.
-              </p>
-              <Link href="  #">more information</Link>
+              <h2>{t("part4")}</h2>
+              <p>{t("part5")}</p>
+              <p>{t("part6")}</p>
+              <p>{t("part7")}</p>
+              <p className="text-muted">{t("part8")}</p>
             </div>
             <div className="w-100 p-3">
               <img className="img-fluid" src={parol.src} alt="" />
@@ -106,62 +85,21 @@ export default async function  Page({ params: { lng } }) {
               />
             </div>
             <div className="p-4">
-              <h2>WHAT WE DO FOR YOU?</h2>
-              <p>
-                Embarking on a transformative partnership with OneChemic opens
-                the door to a comprehensive array of services designed to
-                elevate your business in the dynamic landscape of chemical raw
-                materials.</p>
-                <p>
-                  {" "}
-                  Our commitment extends far beyond the mere act of importation;
-                </p>{" "}
-                <p>
-                  it is a pledge to be your steadfast ally in the pursuit of
-                  success.
-                </p>{" "}
-                <p>
-                  At the heart of our services is the meticulous sourcing of
-                  premium chemical raw materials from leading global suppliers
-                  in China, Korea, Turkey, Brazil, India, and the European
-                  Union.
-                </p>{" "}
-                We orchestrate a seamless process, ensuring that your business
-                has access to the highest quality materials that meet global
-                standards.
-                <p>
-                  As a conduit between international excellence and the vibrant
-                  industries of Egypt, OneChemic not only simplifies but
-                  enhances your supply chain dynamics.
-                </p>
-             
-              <Link href="  #">more information</Link>
+              <h2>{t("part9")} </h2>
+              <p>{t("part10")}</p>
+              <p> {t("part11")}</p> <p>{t("part12")}</p> <p>{t("part13")}</p>{" "}
+              {t("part14")}
+              <p>{t("part15")}</p>
             </div>
           </div>
         </section>
         <section>
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className="   p-3">
-              <h2>What sets us apart is our adaptability.</h2>
-              <p>
-                OneChemic is not confined by the limits of a static catalog;
-              </p>
-              <p>
-                {" "}
-                rather, we offer the unique advantage of on-demand imports.
-                Should your specific needs require a material beyond our
-                existing repertoire,
-              </p>
-              <p>
-                our team is poised to explore and secure the exact chemical
-                solution your business demands.
-              </p>{" "}
-              <p>
-                This flexibility is coupled with a commitment to personalized
-                customer service — an assurance that your individual
-                requirements will be met with precision and care
-              </p>
-              <Link href="  #">more information</Link>
+              <h2> {t("part16")}</h2>
+              <p>{t("part17")}</p>
+              <p>{t("part18")} </p>
+              <p>{t("part19")}</p> <p>{t("part20")}</p>
             </div>
             <div className="w-100    p-3">
               <img
@@ -175,32 +113,19 @@ export default async function  Page({ params: { lng } }) {
         <section>
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className="   p-3">
-              <h4>
-                Whether you operate within the realms of manufacturing prowess
-                or commercial distribution
-              </h4>
+              <h4>{t("part21")}</h4>
+              <p>{t("part22")}</p>
               <p>
-                we are architects of tailored solutions. We understand the
-                intricate nuances of your industry and stand ready to provide
-                not just chemicals but strategic partnerships.
-              </p>
-              <p>
-                In choosing OneChemic, you align your business with a beacon of
-                quality, reliability, and unparalleled service excellence,
-                ensuring that your journey to success is not just efficient but
-                transformative.
+                {t("part23")}
+              
               </p>{" "}
               <p>
-                Your growth is our priority, and our suite of services is
-                designed to catalyze your ascent to new echelons of achievement.
+                {t("part24")}
+               
               </p>
               <p>
-                {" "}
-                Welcome to a partnership where your success is not just a goal;
-                it's a shared journey, and OneChemic is your steadfast companion
-                on this path of excellence.
+                {t("part25")} 
               </p>
-              <Link href="  #">more information</Link>
             </div>
           </div>
         </section>
@@ -208,18 +133,13 @@ export default async function  Page({ params: { lng } }) {
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className=" p-3">
               <div className="px-4 py-1 position-relative fw-bold title-2 fs-3">
-                <span>OneChemic. A global brand.</span>
+                <span>{t("part26")}</span>
               </div>
 
               <p>
-                <span className="fs-4">since 12 years,</span>
-                our journey began with a commitment to providing unparalleled
-                quality and service to the Egyptian market. Over nearly a
-                decade, we have evolved into a trusted name, sourcing top-tier
-                materials globally from China, Korea, Turkey, Brazil, India, and
-                the European Union..
+                <span className="fs-4">{t("part27")}</span>
+                {t("part28")} 
               </p>
-              <Link href="  #">more information</Link>
             </div>
             <div className="w-100    p-3">
               <img
@@ -231,8 +151,7 @@ export default async function  Page({ params: { lng } }) {
           </div>
         </section>
       </div>
-      <ContactLink lng={lng}/>
+      <ContactLink lng={lng} />
     </>
   );
-};
-
+}

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import ShopNowCard from '../Components/ShopNowCard/ShopNowCard';
 import styles from './home.module.css'
-import factory from "../about-us/factory.jpg";
+import factory from "../../../assets/factory1.jpg";
 import ImageGallery from "../Components/Gallery/Gallery";
 import { useTranslation } from "../../i18n";
 import ContactLink from '../Components/Contact-link/Contact-link';
