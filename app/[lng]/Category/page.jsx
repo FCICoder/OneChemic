@@ -24,17 +24,6 @@ const Page = ({ params: { lng } }) => {
               <div key={index} className="col-md-4 mb-4">
                 <div className="card">
                   <div className="card-body">
-                    {lng === "en" ? (
-                      <>
-                        <h5 className="card-title">{item.en.title}</h5>
-                        <p className="card-text">{item.en.description}</p>
-                      </>
-                    ):(
-                      <>
-                        <h5 className="card-title">{item.ar.title}</h5>
-                        <p className="card-text">{item.ar.description}</p>
-                      </>
-                    )}
                     {/* Add an image if there is a URL */}
                     {item.ImageUrl && (
                       <img
@@ -42,6 +31,17 @@ const Page = ({ params: { lng } }) => {
                         className="img-fluid"
                         alt="Card"
                       />
+                    )}
+                    {lng === "en" ? (
+                      <>
+                        <h5 className="card-title">{item.en.title}</h5>
+                        {/* <p dangerouslySetInnerHTML={{ __html: item.en.test }} /> */}
+
+                      </>
+                    ) : (
+                      <>
+                        <h5 className="card-title">{item.ar.title}</h5>
+                      </>
                     )}
                   </div>
                 </div>

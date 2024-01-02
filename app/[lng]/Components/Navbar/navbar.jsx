@@ -18,7 +18,7 @@ export const Navbar = ({ lng }) => {
         <nav className={`navbar navbar-expand-sm navbar-light ${styles.nav}`}>
           <div className="container">
             <div className={`${styles.image}`}>
-              <Link className="navbar-brand" href={`${lng}`}>
+              <Link className="navbar-brand" href={`/${lng}`}>
                 <Image src={img} alt="OneChemic logo" className="img-fluid" />
               </Link>
             </div>
