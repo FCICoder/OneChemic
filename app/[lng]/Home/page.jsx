@@ -154,7 +154,7 @@ success` :
 
     <section>
           <div className="shadow p-3 mb-2 bg-white rounded">
-            <ImageGallery images={images} />
+            <ImageGallery images={images} lng={lng} />
             <div className='container'>
                     <Link className='text-decoration-none' href='../Contactus' >
                     {(lng=='en')?'CONTACTUS':'تواصل معنا'}<i className="fa-solid fa-greater-than fa-fade ms-2" style={{fontSize:'14px'}}></i>
