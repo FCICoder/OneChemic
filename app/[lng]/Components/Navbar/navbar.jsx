@@ -4,15 +4,11 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import img from "../../../../assets/OneChmeicLogo.jpg";
-
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-// import { useTranslation } from '../../../i18n'
 
 export  const Navbar =  ({lng}) => {
-  // const { t } = await useTranslation(lng, 'navbar')
 var myLang=lng
-  //   const { t } =  useTranslation(lng, 'navbar')
 
   const router = usePathname();
   return (
@@ -21,7 +17,7 @@ var myLang=lng
         <nav className={`navbar navbar-expand-sm navbar-light ${styles.nav}`}>
           <div className="container">
             <div className={`${styles.image}`}>
-              <Link className="navbar-brand" href="/">
+              <Link className="navbar-brand" href={`${lng}`}>
                 <Image src={img} alt="OneChemic logo" className="img-fluid" />
               </Link>
             </div>
@@ -37,16 +33,18 @@ var myLang=lng
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="collapsibleNavId">
-              <ul className={`${styles.navbar_nav} me-auto mt-2 mt-lg-0`}>
+            <div className="   collapse navbar-collapse" id="collapsibleNavId">
+              <div className=" w-100 d-flex justify-content-center"> 
+
+              <ul className={` navbar-nav  mt-2 mt-lg-0 translate-50`}>
                 <li className="nav-item">
                   <Link
                     className={`${router == `/${lng}` ? `${styles.active}` : ""} ${
                       styles.nav_link
-                    } `}
+                    }  `}
                     href="/"
                   >
-                   home
+                   {(myLang=='en')?"Home":"الصفحة الرئيسيه"}
                    {/* {t('navbar.part1')} */}
                   </Link>
                 </li>
@@ -67,7 +65,7 @@ var myLang=lng
                     } ${styles.nav_link}`}
                     href={`/${lng}/Contactus`}
                   >
-                    Contact Us
+                    {(myLang=='en')?"Contactus":"تواصل معنا"}
                   </Link>
                 </li>{" "}
                 <li className="nav-item dropdown">
@@ -91,6 +89,7 @@ var myLang=lng
                   </div>
                 </li>
               </ul>
+              </div>
             </div>
           </div>
         </nav>
