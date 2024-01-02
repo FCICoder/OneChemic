@@ -5,6 +5,7 @@ import styles from './home.module.css'
 import factory from "../about-us/factory.jpg";
 import ImageGallery from "../Components/Gallery/Gallery";
 import { useTranslation } from "../../i18n";
+import ContactLink from '../Components/Contact-link/Contact-link';
 
 
 export default async function Content( { lng } ) {
@@ -167,6 +168,7 @@ export default async function Content( { lng } ) {
             </div>
           </div>
         </section>
+        <ContactLink lng={lng}/>
     </>
 
 }

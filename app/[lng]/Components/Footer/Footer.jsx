@@ -12,7 +12,7 @@ export const Footer = async ({ lng }) => {
 
   return (
     <div style={{ backgroundColor: "#1f44ab" }}>
-      <footer style={{ marginTop: 50 }} className="text-center">
+      <footer  className="text-center">
         {languages
           .filter((l) => lng !== l)
           .map((l, index) => {

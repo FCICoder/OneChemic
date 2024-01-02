@@ -5,6 +5,7 @@ import Link from "next/link";
 import parol from "./2w.jpg";
 import factory from "./factory.jpg";
 import { useTranslation } from '../../i18n'
+import ContactLink from "../Components/Contact-link/Contact-link";
 // export async function generateMetadata(){
 //  const t =await useTranslation()
 //  return{
@@ -230,6 +231,7 @@ export default async function  Page({ params: { lng } }) {
           </div>
         </section>
       </div>
+      <ContactLink lng={lng}/>
     </>
   );
 };
