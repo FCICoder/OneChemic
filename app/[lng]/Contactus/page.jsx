@@ -4,6 +4,7 @@ import style from "./page.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { Helmet } from "react-helmet";
 export default  function Page({ params: { lng }}) {
   var myLang=lng;
 
@@ -28,6 +29,9 @@ export default  function Page({ params: { lng }}) {
   });
   return (
     <>
+      <Helmet>
+         <title>{(lng == 'en')? 'Contact us' : 'تواصل معنا'}</title>
+      </Helmet>
       <section id="contactUs" className="mt-5">
         <div className="row container m-auto mb-2">
           <div className="col-md-5">
