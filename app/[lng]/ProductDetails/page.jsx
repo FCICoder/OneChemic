@@ -4,25 +4,29 @@ import products from '../Category/products.json'
 import styles from './prdDetails.module.css'
 export default function Page({ params: { lng } }) {
     const [product, setProduct] = useState('');
-    let prd;
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    let productParam = urlSearchParams.get("product");
-    let categoryParam = urlSearchParams.get("category");
+    let prd , categoryParam ,productParam;
+
 
     useEffect(() => {
-        if (typeof window !== 'undefined'){
+        if (typeof window !== 'undefined') {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+             productParam = urlSearchParams.get("product");
+             categoryParam = urlSearchParams.get("category");
             if (categoryParam && productParam) {
                 prd = products[categoryParam].filter((prd) => prd.id == productParam)
                 setProduct(prd);
             }
         }
-        
+
     }, [])
 
     useEffect(() => {
-        if (typeof window !== 'undefined'){
-        prd = products[categoryParam].filter((prd) => prd.id == productParam)
-        setProduct(prd);
+        if (typeof window !== 'undefined') {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            let productParam = urlSearchParams.get("product");
+            let categoryParam = urlSearchParams.get("category");
+            prd = products[categoryParam].filter((prd) => prd.id == productParam)
+            setProduct(prd);
         }
     }, [categoryParam, productParam])
 
