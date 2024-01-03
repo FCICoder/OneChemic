@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import products from '../Category/products.json'
 import styles from './prdDetails.module.css'
-export default function page({ params: { lng } }) {
+export default function Page({ params: { lng } }) {
     const [product, setProduct] = useState('');
     let prd;
     const urlSearchParams = new URLSearchParams(window.location.search);
