@@ -10,15 +10,20 @@ export default function Page({ params: { lng } }) {
     let categoryParam = urlSearchParams.get("category");
 
     useEffect(() => {
-        if (categoryParam && productParam) {
-            prd = products[categoryParam].filter((prd) => prd.id == productParam)
-            setProduct(prd);
+        if (typeof window !== 'undefined'){
+            if (categoryParam && productParam) {
+                prd = products[categoryParam].filter((prd) => prd.id == productParam)
+                setProduct(prd);
+            }
         }
+        
     }, [])
 
     useEffect(() => {
+        if (typeof window !== 'undefined'){
         prd = products[categoryParam].filter((prd) => prd.id == productParam)
         setProduct(prd);
+        }
     }, [categoryParam, productParam])
 
     return (
