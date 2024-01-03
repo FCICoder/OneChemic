@@ -9,8 +9,14 @@ import { usePathname, useRouter } from "next/navigation";
 
 export const Navbar = ({ lng }) => {
   var myLang = lng;
-
   const router = usePathname();
+
+ function select(e){
+  if(window.location.search !== e.target.search ){
+    window.location.href = e.target.href;
+  }
+
+}
   return (
     <>
       <section>
@@ -67,7 +73,7 @@ export const Navbar = ({ lng }) => {
                       {myLang == "en" ? "Contactus" : "تواصل معنا"}
                     </Link>
                   </li>{" "}
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown" >
                     <Link
                       className={`${styles.nav_link} dropdown-toggle`}
                       href="#"
@@ -75,8 +81,9 @@ export const Navbar = ({ lng }) => {
                       data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      
                     >
-                      Dropdown
+                      Categories
                     </Link>
                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                       <Link 
@@ -85,6 +92,7 @@ export const Navbar = ({ lng }) => {
                           pathname: `/${lng}/Category`,
                           query: { category: "Solevants" },
                         }}
+                        onClick={(e)=>select(e)}
                       >
                         Solevants
                       </Link>
@@ -93,6 +101,7 @@ export const Navbar = ({ lng }) => {
                         pathname: `/${lng}/Category`,
                         query: { category: "Polymers" },
                       }}
+                      onClick={(e)=>select(e)}
                       >
                         Polymers
                       </Link>
@@ -101,6 +110,7 @@ export const Navbar = ({ lng }) => {
                         pathname: `/${lng}/Category`,
                         query: { category: "Chemical Additives and Processing Aids" },
                       }}
+                      onClick={(e)=>select(e)}
                       >
                         Chemical Additives and Processing Aids
                       </Link>
@@ -109,6 +119,7 @@ export const Navbar = ({ lng }) => {
                         pathname: `/${lng}/Category`,
                         query: { category: "Preservatives and Chemical Processing" },
                       }}
+                      onClick={(e)=>select(e)}
                       >
                         Preservatives and Chemical Processing
                       </Link>
@@ -117,6 +128,7 @@ export const Navbar = ({ lng }) => {
                         pathname: `/${lng}/Category`,
                         query: { category: "Pigments and Fillers" },
                       }}
+                      onClick={(e)=>select(e)}
                       >
                         Pigments and Fillers
                       </Link>

@@ -1,48 +1,40 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import products from "./products.json";
-import { useRouter } from "next/router";
-
+import styles from './category.module.css'
 const Page = ({ params: { lng } }) => {
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState('');
   const myProducts = products;
   const urlSearchParams = new URLSearchParams(window.location.search);
-  const categoryParam = urlSearchParams.get("category");
-  // console.log(window.location);
+  let categoryParam = urlSearchParams.get("category");
 
- let ccc ;
-
- useEffect(()=>{
- ccc = urlSearchParams.getAll("category");
- },[])
   useEffect(()=>{
-    console.log(urlSearchParams.getAll("category")); 
-    if (categoryParam) {
+    if (categoryParam !== category) {
+      categoryParam = urlSearchParams.get("category");
       setCategory(categoryParam);
     }
-  },[ccc ])
+  },[category])
 
   return (
     <>
-      <div className="container">
+      <div className="container mt-3">
         <div className="row">
-          <h1>{category}</h1>
           {myProducts[category] &&
             myProducts[category].map((item, index) => (
-              <div key={index} className="col-md-4 mb-4">
-                <div className="card">
+              <div key={index} className="col-md-4 mb-4 ">
+                <div className={`${styles.card} card rounded-4  text-center shadow`}>
                   <div className="card-body">
-                    {/* Add an image if there is a URL */}
                     {item.ImageUrl && (
                       <img
                         src={item.ImageUrl}
-                        className="img-fluid"
-                        alt="Card"
+                        className={`img-fluid ${styles.image}`}
+                        alt="ImageCard"
+                        style={{height:'270px', borderRadius:'20px'}}
                       />
                     )}
                     {lng === "en" ? (
                       <>
-                        <h5 className="card-title">{item.en.title}</h5>
+                        <h5 className="card-title mt-4">{item.en.title}</h5>
                         {/* <p className="card-title">{item.en.description}</p> */}
 
                         {/* <p dangerouslySetInnerHTML={{ __html: item.en.test }} /> */}
