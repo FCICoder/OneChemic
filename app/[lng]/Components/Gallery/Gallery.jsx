@@ -24,7 +24,7 @@ const ImageGallery = ({ images , lng }) => {
 
   return (
     <>
-      <div className=" h-100 p-auto" style={{backgroundColor:'white'}} >
+      <div className=" h-100 p-auto" style={{backgroundColor:'white',paddingBottom:'40px !important'}} >
         {currentImages.map((image, index) => (
           <div key={index}  id="myContainer">
             <div id="image-container">
@@ -32,15 +32,15 @@ const ImageGallery = ({ images , lng }) => {
             </div>
             <div id="image-desc">
               <p className="d-block text-bold fs-2">{image.description}</p>
-              <p>
+              <p className="pb-5 mb-1" >
                {image.desc}
               </p>
             </div>
           </div>
         ))}
-        <div  id="paginate-buttons" style={{paddingLeft:'18%'}}>
+        <div  id="paginate-buttons" style={{paddingLeft:'18% ', paddingBottom:'80px'}}>
           <button
-            className="mx-1 my-1 border-0 btn p-auto fs-2 lh-1"
+            className="mx-1 my-1 border-0 btn p-auto fs-2 lh-1 mt-5"
             onClick={handlePrevPage}
             disabled={currentPage === 1}
           >
@@ -52,7 +52,7 @@ const ImageGallery = ({ images , lng }) => {
             ></i> }
           </button>
           <button
-            className="mx-1 my-1 border-0  btn   p-auto fs-2 lh-1"
+            className="mx-1 my-1 border-0  btn   p-auto fs-2 lh-1 mt-5"
             onClick={handleNextPage}
             disabled={endIndex >= images.length}
           >

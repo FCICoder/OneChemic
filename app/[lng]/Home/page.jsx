@@ -78,15 +78,11 @@ export default async function Content( { lng } ) {
       Embarking on a transformative partnership with OneChemic
 opens the door to a comprehensive array of services designed to
 elevate your business in the dynamic landscape of chemical raw
-materials. Our commitment extends far beyond the mere act of
-importation; it is a pledge to be your steadfast ally in the pursuit of
-success` :
+materials. ` :
       `الشروع في شراكة تحويلية مع OneChemic
       يفتح الباب أمام مجموعة شاملة من الخدمات المصممة ل
       ارفع مستوى عملك في المشهد الديناميكي للمواد الكيميائية الخام
-      مواد. إن التزامنا يمتد إلى ما هو أبعد من مجرد الفعل
-      استيراد؛ إنه تعهد بأن تكون حليفك الثابت في السعي لتحقيق ذلك
-      نجاح `
+      مواد. `
     
     },
     {
@@ -95,10 +91,9 @@ success` :
       desc:(lng=='en')?`
       Each technical issue is carefully analyzed by our specialists,
        and recipes are created for individual engineering challenges. 
-      This is how we ensure that our clients are certain that the solution presented to them is best suited to their working conditions.
          ` :`يتم تحليل كل مشكلة فنية بعناية من قبل المتخصصين لدينا،
          ويتم إنشاء وصفات للتحديات الهندسية الفردية.
-        هذه هي الطريقة التي نضمن بها أن عملائنا على يقين من أن الحل المقدم لهم هو الأنسب لظروف عملهم.`
+        `
     },
   ];
   return <>
