@@ -3,12 +3,11 @@ import React from "react";
 import "bootstrap/dist/js/bootstrap.bundle";
 import styles from "./navbar.module.css";
 import Image from "next/image";
-import img from "../../../../assets/OneChmeicLogo.jpg";
+import img from "../../../../assets/logo.png";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 export const Navbar = ({ lng }) => {
-  const hamza="jjjjjjjjjjjjjjjjjjj"
   var myLang = lng;
 
   const router = usePathname();
@@ -84,14 +83,42 @@ export const Navbar = ({ lng }) => {
                         className="dropdown-item"
                         href={{
                           pathname: `/${lng}/Category`,
-                          query: { category: "solevants" },
+                          query: { category: "Solevants" },
                         }}
                       >
-                        Action 1
-                        {/* {router.query=hamza} */}
+                        Solevants
                       </Link>
-                      <Link className="dropdown-item" href="#">
-                        Action 2
+                      <Link className="dropdown-item" 
+                       href={{
+                        pathname: `/${lng}/Category`,
+                        query: { category: "Polymers" },
+                      }}
+                      >
+                        Polymers
+                      </Link>
+                      <Link className="dropdown-item" 
+                       href={{
+                        pathname: `/${lng}/Category`,
+                        query: { category: "Chemical Additives and Processing Aids" },
+                      }}
+                      >
+                        Chemical Additives and Processing Aids
+                      </Link>
+                      <Link className="dropdown-item" 
+                       href={{
+                        pathname: `/${lng}/Category`,
+                        query: { category: "Preservatives and Chemical Processing" },
+                      }}
+                      >
+                        Preservatives and Chemical Processing
+                      </Link>
+                      <Link className="dropdown-item" 
+                       href={{
+                        pathname: `/${lng}/Category`,
+                        query: { category: "Pigments and Fillers" },
+                      }}
+                      >
+                        Pigments and Fillers
                       </Link>
                     </div>
                   </li>

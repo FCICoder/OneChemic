@@ -6,13 +6,21 @@ import { useRouter } from "next/router";
 const Page = ({ params: { lng } }) => {
   const [category, setCategory] = useState();
   const myProducts = products;
-  useEffect(() => {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const categoryParam = urlSearchParams.get("category");
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlSearchParams.get("category");
+  // console.log(window.location);
+
+ let ccc ;
+
+ useEffect(()=>{
+ ccc = urlSearchParams.getAll("category");
+ },[])
+  useEffect(()=>{
+    console.log(urlSearchParams.getAll("category")); 
     if (categoryParam) {
       setCategory(categoryParam);
     }
-  }, []);
+  },[ccc ])
 
   return (
     <>
