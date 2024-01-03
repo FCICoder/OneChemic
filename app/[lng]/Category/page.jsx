@@ -6,16 +6,19 @@ import Link from "next/link";
 const Page = ({ params: { lng } }) => {
   const [category, setCategory] = useState('');
   const myProducts = products;
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  let categoryParam = urlSearchParams.get("category");
-
-  useEffect(()=>{
-    if (categoryParam !== category) {
-      categoryParam = urlSearchParams.get("category");
-      setCategory(categoryParam);
-    }
-  },[category])
-
+  if(typeof window !== undefined){
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    let categoryParam = urlSearchParams.get("category");
+  
+    useEffect(()=>{
+      if (categoryParam !== category) {
+        categoryParam = urlSearchParams.get("category");
+        setCategory(categoryParam);
+      }
+    },[category])
+  
+  }
+  
   // function select(e){
 
   //   // setTimeout(()=>{
@@ -36,7 +39,7 @@ const Page = ({ params: { lng } }) => {
       <div className="container mt-3">
         <div className="row">
           {myProducts[category] &&
-            myProducts[category].map((item, index) => (
+            myProducts[category]?.map((item, index) => (
               <div key={index} className="col-md-4 mb-4 ">
                 <Link 
                 href={{
