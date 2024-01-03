@@ -11,7 +11,7 @@ export const Footer = async ({ lng }) => {
   const { t } = await useTranslation(lng, "footer");
 
   return (
-    <div style={{ backgroundColor: "#1f44ab" }}>
+    <div style={{ backgroundColor: "rgb(12, 170, 220)" }}>
       <footer  className="text-center">
         {languages
           .filter((l) => lng !== l)
@@ -24,7 +24,7 @@ export const Footer = async ({ lng }) => {
             );
           })}
       </footer>
-      <div className="container-fluid d-lg-flex d-block px-5 py-2">
+      <div className="container-fluid  d-lg-flex d-block px-5 pt-0 py-2">
         <div className="  d-flex m-auto justify-content-center me-2">
           <div className="">
             <Image
@@ -38,7 +38,7 @@ export const Footer = async ({ lng }) => {
           <div className="position-relative">
             <div className={`${fStyle.titleLogo} ms-3 p-1 my-auto`}>
               {/* <p className={`${fStyle.responsiveLink}`}>{t('part15')}</p> */}
-              <p className={`${fStyle.responsiveLink}`}>{t('part16')}</p>
+              <p className={`${fStyle.responsiveLink} `}>{t('part16')}</p>
             </div>
           </div>
         </div>
@@ -107,8 +107,8 @@ export const Footer = async ({ lng }) => {
       <div className="d-md-flex justify-content-center px-5 ">
         <div>
           <span
-            className={`${fStyle.responsiveLink} text-dark `}
-            style={{ fontSize: "18px" }}
+            className={`${fStyle.responsiveLink}  text-dark `}
+            style={{ fontSize: "21px", fontWeight:'400' }}
           >
             {" "}
             {t("part14")}

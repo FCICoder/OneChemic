@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import products from "./products.json";
 import styles from './category.module.css'
+import Link from "next/link";
 const Page = ({ params: { lng } }) => {
   const [category, setCategory] = useState('');
   const myProducts = products;
@@ -15,6 +16,21 @@ const Page = ({ params: { lng } }) => {
     }
   },[category])
 
+  // function select(e){
+
+  //   // setTimeout(()=>{
+  //   //   console.log(e);
+  //   //   console.log(window.location);
+  //   //   console.log(e.target.baseURI);
+  //   //   console.log(e.target.baseURI);
+  //   //   if(window.location.href === e.target.baseURI ){
+  //   //     // window.location.href = e.target.baseURI
+  //   //     location.reload();
+  //   //     console.log('qewwqqqqqqq');
+  //   //   }
+  //   // },1000)
+   
+  // }
   return (
     <>
       <div className="container mt-3">
@@ -22,6 +38,13 @@ const Page = ({ params: { lng } }) => {
           {myProducts[category] &&
             myProducts[category].map((item, index) => (
               <div key={index} className="col-md-4 mb-4 ">
+                <Link 
+                href={{
+                  pathname: `/${lng}/ProductDetails`,
+                  query: { product: `${item.id}`, category : `${category}` },
+                }}
+                // onClick={(e)=>select(e)} 
+                >
                 <div className={`${styles.card} card rounded-4  text-center shadow`}>
                   <div className="card-body">
                     {item.ImageUrl && (
@@ -47,6 +70,8 @@ const Page = ({ params: { lng } }) => {
                     )}
                   </div>
                 </div>
+                </Link>
+                
               </div>
             ))}
         </div>

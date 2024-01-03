@@ -6,17 +6,16 @@ import Image from "next/image";
 import img from "../../../../assets/logo.png";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-
+import { languages } from "../../../i18n/settings";
 export const Navbar = ({ lng }) => {
   var myLang = lng;
   const router = usePathname();
 
- function select(e){
-  if(window.location.search !== e.target.search ){
-    window.location.href = e.target.href;
+  function select(e) {
+    if (window.location.search !== e.target.search) {
+      window.location.href = e.target.href;
+    }
   }
-
-}
   return (
     <>
       <section>
@@ -44,9 +43,8 @@ export const Navbar = ({ lng }) => {
                 <ul className={` navbar-nav  mt-2 mt-lg-0 translate-50`}>
                   <li className="nav-item">
                     <Link
-                      className={`${
-                        router == `/${lng}` ? `${styles.active}` : ""
-                      } ${styles.nav_link}  `}
+                      className={`${router == `/${lng}` ? `${styles.active}` : ""
+                        } ${styles.nav_link}  `}
                       href={`/${lng}`}
                     >
                       {myLang == "en" ? "Home" : "الصفحة الرئيسيه"}
@@ -55,9 +53,8 @@ export const Navbar = ({ lng }) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      className={`${
-                        router == `/${lng}/about-us` ? `${styles.active}` : ""
-                      } ${styles.nav_link}`}
+                      className={`${router == `/${lng}/about-us` ? `${styles.active}` : ""
+                        } ${styles.nav_link}`}
                       href={`/${lng}/about-us`}
                     >
                       {myLang == "en" ? "About Us" : "نبذة عنا"}
@@ -65,9 +62,8 @@ export const Navbar = ({ lng }) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      className={`${
-                        router == `/${lng}/Contactus` ? `${styles.active}` : ""
-                      } ${styles.nav_link}`}
+                      className={`${router == `/${lng}/Contactus` ? `${styles.active}` : ""
+                        } ${styles.nav_link}`}
                       href={`/${lng}/Contactus`}
                     >
                       {myLang == "en" ? "Contactus" : "تواصل معنا"}
@@ -81,56 +77,56 @@ export const Navbar = ({ lng }) => {
                       data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
-                      
+
                     >
-                      Categories
+                      {(lng == 'en')?'Categories': ' الفئات'}
                     </Link>
                     <div className="dropdown-menu" aria-labelledby="dropdownId">
-                      <Link 
+                      <Link
                         className="dropdown-item"
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Solevants" },
                         }}
-                        onClick={(e)=>select(e)}
+                        onClick={(e) => select(e)}
                       >
-                        Solevants
+                        {(lng=='en')?'Solevants': 'المذيبات '}
                       </Link>
-                      <Link className="dropdown-item" 
-                       href={{
-                        pathname: `/${lng}/Category`,
-                        query: { category: "Polymers" },
-                      }}
-                      onClick={(e)=>select(e)}
+                      <Link className="dropdown-item"
+                        href={{
+                          pathname: `/${lng}/Category`,
+                          query: { category: "Polymers" },
+                        }}
+                        onClick={(e) => select(e)}
                       >
-                        Polymers
+                        {(lng=='en')?'Polymers': 'البوليمرات '}
                       </Link>
-                      <Link className="dropdown-item" 
-                       href={{
-                        pathname: `/${lng}/Category`,
-                        query: { category: "Chemical Additives and Processing Aids" },
-                      }}
-                      onClick={(e)=>select(e)}
+                      <Link className="dropdown-item"
+                        href={{
+                          pathname: `/${lng}/Category`,
+                          query: { category: "Chemical Additives and Processing Aids" },
+                        }}
+                        onClick={(e) => select(e)}
                       >
-                        Chemical Additives and Processing Aids
+                        {(lng=='en')?'Chemical Additives and Processing Aids': 'المضافات الكيميائية ومساعدات المعالجة '}
                       </Link>
-                      <Link className="dropdown-item" 
-                       href={{
-                        pathname: `/${lng}/Category`,
-                        query: { category: "Preservatives and Chemical Processing" },
-                      }}
-                      onClick={(e)=>select(e)}
+                      <Link className="dropdown-item"
+                        href={{
+                          pathname: `/${lng}/Category`,
+                          query: { category: "Preservatives and Chemical Processing" },
+                        }}
+                        onClick={(e) => select(e)}
                       >
-                        Preservatives and Chemical Processing
+                        {(lng=='en')?'Preservatives and Chemical Processing': 'المواد الحافظة والمعالجة الكيميائية '}
                       </Link>
-                      <Link className="dropdown-item" 
-                       href={{
-                        pathname: `/${lng}/Category`,
-                        query: { category: "Pigments and Fillers" },
-                      }}
-                      onClick={(e)=>select(e)}
+                      <Link className="dropdown-item"
+                        href={{
+                          pathname: `/${lng}/Category`,
+                          query: { category: "Pigments and Fillers" },
+                        }}
+                        onClick={(e) => select(e)}
                       >
-                        Pigments and Fillers
+                        {(lng=='en')?'Pigments and Fillers': 'الأصباغ والحشو '}
                       </Link>
                     </div>
                   </li>
@@ -139,6 +135,20 @@ export const Navbar = ({ lng }) => {
             </div>
           </div>
         </nav>
+        <hr className="text-light p-0 m-0" style={{ height: '1px', backgroundColor: 'white' }} />
+        <div className={`${styles.language}`}>
+          {languages
+            .filter((l) => lng !== l)
+            .map((l, index) => {
+              return (
+                <span key={l} className=" w-100 container" style={{fontSize:'14px'}}>
+                  {index > 0 && " or "}
+                  <Link className="text-dark    text-decoration-none" href={`/${l}`}>{lng == 'ar' ? "Browse in English " : " تصفح بالعربية"}</Link>
+                </span>
+              );
+            })}
+        </div>
+
       </section>
     </>
   );

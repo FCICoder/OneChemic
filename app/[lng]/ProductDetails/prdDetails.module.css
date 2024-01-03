@@ -1,6 +1,6 @@
 .image{
     transition: all .3s;
-    width: 80%;
+    width: 70%;
 }
 
 .image:hover{
@@ -8,9 +8,9 @@
 }
 
 .card {
-    height: 400px;
+    height: 300px;
+    width: 70%;
     transition: all .7s;
-    cursor: pointer;
 }
 
 .card:hover{
