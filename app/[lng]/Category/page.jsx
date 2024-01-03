@@ -6,18 +6,33 @@ import Link from "next/link";
 const Page = ({ params: { lng } }) => {
   const [category, setCategory] = useState('');
   const myProducts = products;
-  if(typeof window !== undefined){
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    let categoryParam = urlSearchParams.get("category");
   
-    useEffect(()=>{
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      let categoryParam = urlSearchParams.get("category");
+  
       if (categoryParam !== category) {
-        categoryParam = urlSearchParams.get("category");
         setCategory(categoryParam);
       }
-    },[category])
+    }
+  }, [category]);
+
+    useEffect(()=>{
+      if (typeof window !== 'undefined') {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        let categoryParam = urlSearchParams.get("category");
+    
+        if (categoryParam !== category) {
+          setCategory(categoryParam);
+        }
+      } 
+    },[])
   
-  }
+  
+
+  
+
   
   // function select(e){
 
