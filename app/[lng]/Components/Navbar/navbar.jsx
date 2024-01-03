@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import "bootstrap/dist/js/bootstrap.bundle";
+import React, { useEffect } from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import img from "../../../../assets/logo.png";
@@ -10,6 +9,7 @@ import { languages } from "../../../i18n/settings";
 export const Navbar = ({ lng }) => {
   var myLang = lng;
   const router = usePathname();
+
 
   function select(e) {
     if (window.location.search !== e.target.search) {
@@ -150,6 +150,7 @@ export const Navbar = ({ lng }) => {
         </div>
 
       </section>
+
     </>
   );
 };
