@@ -4,7 +4,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Footer } from './Components/Footer/Footer.jsx'
 import { Navbar } from './Components/Navbar/navbar.jsx'
-import Content from './Home/page.jsx'
 import Head from 'next/head.js'
 
 export const metadata = {
@@ -14,6 +13,7 @@ export const metadata = {
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
+
 
 export default function RootLayout({
   children,
