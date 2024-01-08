@@ -12,18 +12,6 @@ export const Footer = async ({ lng }) => {
 
   return (
     <div style={{ backgroundColor: "rgb(12, 170, 220)" }}>
-      <footer  className="text-center">
-        {languages
-          .filter((l) => lng !== l)
-          .map((l, index) => {
-            return (
-              <span key={l}>
-                {index > 0 && " or "}
-                <Link className="text-dark fs-3 text-decoration-none" href={`/${l}`}>{lng=='ar'?"Browse in English ":" تصفح بالعربية"}</Link>
-              </span>
-            );
-          })}
-      </footer>
       <div className="container-fluid  d-lg-flex d-block px-5 pt-0 py-2">
         <div className="  d-flex m-auto justify-content-center me-2">
           <div className="">

@@ -4,7 +4,7 @@
   position: absolute;
   left: 0;
   top: 7px;
-  bottom: 70px;
+  bottom: 20px;
   width: 4px;
   background-color: rgb(72, 174,221); 
 }
@@ -23,4 +23,16 @@
     font-size: larger;
     color: rgb(72, 174,221);
     text-decoration: none;
+  }
+
+  #about-us p {
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+    color: rgba(33, 37, 41, 0.75)
+  }
+
+  #about-us h2 {
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+    font-weight: 600;
   }

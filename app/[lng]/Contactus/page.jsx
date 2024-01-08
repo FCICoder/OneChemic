@@ -4,19 +4,19 @@ import style from "./page.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Helmet } from "react-helmet";
-export default  function Page({ params: { lng }}) {
-  var myLang=lng;
+export default function Page({ params: { lng } }) {
+  var myLang = lng;
 
   let validateSchema = Yup.object({
     name: Yup.string()
-      .min(5, (lng == 'en') ?"minimum 5 character":"اقل عدد من الحروف هو خمسه")
-      .required((lng == 'en')?"your name is required":'خانة الاسم مطلوبه' ),
+      .min(5, (lng == 'en') ? "minimum 5 character" : "اقل عدد من الحروف هو خمسه")
+      .required((lng == 'en') ? "your name is required" : 'خانة الاسم مطلوبه'),
     email: Yup.string()
       .email("is invalid email")
-      .required((lng=='en')?"your email is required":'خانة البريد الالكتروني مطلوبه'),
+      .required((lng == 'en') ? "your email is required" : 'خانة البريد الالكتروني مطلوبه'),
     message: Yup.string()
-      .min(5, (lng== 'en')?"minimum 5 character": 'اقل عدد من الحروف هو خمسه')
-      .required((lng=='en')?"your message is required":'خانة الرساله مطلوبه'),
+      .min(5, (lng == 'en') ? "minimum 5 character" : 'اقل عدد من الحروف هو خمسه')
+      .required((lng == 'en') ? "your message is required" : 'خانة الرساله مطلوبه'),
   });
   const formik = useFormik({
     initialValues: {
@@ -29,29 +29,36 @@ export default  function Page({ params: { lng }}) {
   return (
     <>
       <Helmet>
-         <title>{(lng == 'en')? 'Contact us' : 'تواصل معنا'}</title>
+        <title>{(lng == 'en') ? 'Contact us' : 'تواصل معنا'}</title>
       </Helmet>
       <section id="contactUs" className="mt-5">
         <div className="row container m-auto mb-2">
           <div className="col-md-5">
             <h2 className={`${style.title} ms-2`} style={{ fontWeight: "700" }}>
-              {(myLang==='en')?"Contact US":"اتصل بنا"}
+              {(myLang === 'en') ? "Contact US" : "اتصل بنا"}
             </h2>
             <div className={`${style.leftContent} mb-4`}>
-              <h3>{(lng=='en')?'Onechemic Egypt.':' .ون كيمك مصر '} </h3>
+              <h3>{(lng == 'en') ? 'Onechemic Egypt.' : ' .ون كيمك مصر '} </h3>
               <p className="text-muted mt-3 mb-1">
                 <i className=" fas fa-location-dot me-2"></i>
-                {(lng=='en')?'Alexandria agricultural Slow Road,':',الاسكندريه الطريق الزراعي البطئ'}
+                {(lng == 'en') ? 'Alexandria agricultural Slow Road,' : ',الاسكندريه الطريق الزراعي البطئ'}
                 <br />
-                {(lng=='en')?'Qalyoub Qalyoubia,':' , القليوبيه قليوب'}
-                <br /> {(lng=='en')?'Egypt.':' .مصر'}
+                {(lng == 'en') ? 'Qalyoub Qalyoubia,' : ' , القليوبيه قليوب'}
+                <br /> {(lng == 'en') ? 'Egypt.' : ' .مصر'}
               </p>
             </div>
             <div className={`${style.leftContent} mt-0 `}>
-              <p className="text-muted mb-4 ">
-                <i className="fa fa-phone me-2"></i>
-                {lng == 'en'?'(+20 ) 10 22 64 1805':"1805 64 22 10 (20+)"}
-              </p>
+              <a
+                href="tel:+20102241805"
+                className="text-decoration-none text-muted "
+              >
+                  <i className="fa fa-phone me-2 text-muted "></i>
+                <p className="text-muted mb-4 d-inline ">
+                  {lng == 'en' ? '(+20 ) 10 22 64 1805' : "1805 64 22 10 (20+)"}
+                </p>
+              </a>
+              <br />
+              <br />
               <i className="fas fa-envelope me-2 text-muted "></i>
               <a
                 href="mailto:info@onechemic.com"
@@ -69,7 +76,7 @@ export default  function Page({ params: { lng }}) {
                 method="POST"
                 target="_blank"
               >
-                <label htmlFor="name">{(lng == 'en')?'First and last name':'الاسم الاول و الاسم الاخير .'}</label>
+                <label htmlFor="name">{(lng == 'en') ? 'First and last name' : 'الاسم الاول و الاسم الاخير .'}</label>
                 <input
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -78,7 +85,7 @@ export default  function Page({ params: { lng }}) {
                   type="text"
                   name="name"
                   id="name"
-                  placeholder={(lng == 'en')?"Please state your full name":'من  فضلك ادخل اسمك كاملا.'}
+                  placeholder={(lng == 'en') ? "Please state your full name" : 'من  فضلك ادخل اسمك كاملا.'}
                 />
                 {formik.errors.name && formik.touched.name ? (
                   <div className="alert alert-danger mt-2 p-2">
@@ -88,7 +95,7 @@ export default  function Page({ params: { lng }}) {
                   ""
                 )}
 
-                <label htmlFor="email">{(lng == 'en')?'Email address':'البريد الالكتروني'}</label>
+                <label htmlFor="email">{(lng == 'en') ? 'Email address' : 'البريد الالكتروني'}</label>
                 <input
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -97,7 +104,7 @@ export default  function Page({ params: { lng }}) {
                   type="email"
                   name="email"
                   id="email"
-                  placeholder={(lng == 'en')?"Please enter your e-mail address" : "من فضلك ادخل البريد الالكتروني ."}
+                  placeholder={(lng == 'en') ? "Please enter your e-mail address" : "من فضلك ادخل البريد الالكتروني ."}
                 />
                 {formik.errors.email && formik.touched.email ? (
                   <div className="alert alert-danger mt-2 p-2">
@@ -107,7 +114,7 @@ export default  function Page({ params: { lng }}) {
                   ""
                 )}
 
-                <label htmlFor="message">{(lng == 'en')?'Message':'الرساله'}</label>
+                <label htmlFor="message">{(lng == 'en') ? 'Message' : 'الرساله'}</label>
                 <textarea
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -116,7 +123,7 @@ export default  function Page({ params: { lng }}) {
                   type="text"
                   name="message"
                   id="message"
-                  placeholder={(lng == 'en')?"What question do you have?" : "ما هو سؤالك؟"}
+                  placeholder={(lng == 'en') ? "What question do you have?" : "ما هو سؤالك؟"}
                 ></textarea>
                 {formik.errors.message && formik.touched.message ? (
                   <div className="alert alert-danger mt-2 p-2">
@@ -135,7 +142,7 @@ export default  function Page({ params: { lng }}) {
                     style={{ fontWeight: "600" }}
                   >
                     {" "}
-                    {(lng=='en') ? 'Send' : 'ارسال '}
+                    {(lng == 'en') ? 'Send' : 'ارسال '}
                     <i className="fas fa-paper-plane ms-2"></i>
                   </button>
                 </div>

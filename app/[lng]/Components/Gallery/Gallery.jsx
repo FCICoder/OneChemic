@@ -32,13 +32,13 @@ const ImageGallery = ({ images , lng }) => {
             </div>
             <div id="image-desc">
               <p className="d-block text-bold fs-2">{image.description}</p>
-              <p className="pb-5 mb-1" >
+              <p className="pb-5 mb-1 text-muted fst-italic" >
                {image.desc}
               </p>
             </div>
           </div>
         ))}
-        <div  id="paginate-buttons" style={{paddingLeft:'18% ', paddingBottom:'80px'}}>
+        <div  id="paginate-buttons" style={{paddingLeft:'18% ', paddingBottom:'80px' , marginTop:'20px'}}>
           <button
             className="mx-1 my-1 border-0 btn p-auto fs-2 lh-1 mt-5"
             onClick={handlePrevPage}

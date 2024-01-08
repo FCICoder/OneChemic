@@ -37,15 +37,14 @@ export default async function Page({ params: { lng } }) {
   return (
     <>
   
-      <div className="container" id="about-us">
+      <div className="container mt-5" id="about-us">
         
         <section>
           <div className="row m-0 p-1 shadow p-3 mb-1 bg-white rounded ">
             <div className="col-md-5 pt-1">
               <div className="px-4 py-1 position-relative fw-bold title-1">
                 <p className="fs-3 " style={{ overflow: "hidden" }}>
-                  {t("part1")}
-                  <span className="d-flex">{t("part2")}</span>
+                  <span >{t("part1")}</span>
                 </p>
               </div>
             </div>
@@ -60,16 +59,16 @@ export default async function Page({ params: { lng } }) {
           </div>
         </section>
         <section>
-          <div className="my-1    container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
+          <div className="my-1  container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className="ps-2 py-2">
-              <h2>{t("part4")}</h2>
-              <p>{t("part5")}</p>
-              <p>{t("part6")}</p>
-              <p>{t("part7")}</p>
+              <h2 >{t("part4")}</h2>
+              <p className="text-muted">{t("part5")}</p>
+              <p className="text-muted">{t("part6")}</p>
+              <p className="text-muted">{t("part7")}</p>
               <p className="text-muted">{t("part8")}</p>
             </div>
             <div className="w-100 p-3">
-              <img className="img-fluid" src={parol.src} alt="" />
+              <img className="img-fluid" src={parol.src} alt="chemical products" />
             </div>
           </div>
         </section>
@@ -79,14 +78,16 @@ export default async function Page({ params: { lng } }) {
               <img
                 className="img-fluid"
                 src="https://bdcinternational.com/content/uploads/2022/03/bdc_uslugi-1-1400x700.jpg"
-                alt=""
+                alt="testing our products quality"
               />
             </div>
             <div className="p-4">
               <h2>{t("part9")} </h2>
               <p>{t("part10")}</p>
-              <p> {t("part11")}</p> <p>{t("part12")}</p> <p>{t("part13")}</p>{" "}
-              {t("part14")}
+              <p> {t("part11")}</p> 
+              <p>{t("part12")}</p> 
+              <p>{t("part13")}</p>
+              <p>{t("part14")}</p>
               <p>{t("part15")}</p>
             </div>
           </div>
@@ -99,11 +100,11 @@ export default async function Page({ params: { lng } }) {
               <p>{t("part18")} </p>
               <p>{t("part19")}</p> <p>{t("part20")}</p>
             </div>
-            <div className="w-100    p-3">
+            <div className="w-100 p-3">
               <img
                 className="img-fluid"
                 src="https://bdcinternational.com/content/uploads/2022/03/szeroka_gama.jpg"
-                alt=""
+                alt="large store  "
               />
             </div>
           </div>
@@ -111,7 +112,7 @@ export default async function Page({ params: { lng } }) {
         <section>
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className="   p-3">
-              <h4>{t("part21")}</h4>
+              <h2>{t("part21")}</h2>
               <p>{t("part22")}</p>
               <p>{t("part23")}</p> <p>{t("part24")}</p>
               <p>{t("part25")}</p>
@@ -122,19 +123,20 @@ export default async function Page({ params: { lng } }) {
           <div className="my-1 py-2   container d-lg-flex d-md-block shadow p-3 mb-2 bg-white rounded">
             <div className=" p-3">
               <div className="px-4 py-1 position-relative fw-bold title-2 fs-3">
+                <h2>
                 <span>{t("part26")}</span>
+                </h2>
               </div>
 
               <p>
-                <span className="fs-4">{t("part27")}</span>
                 {t("part28")}
               </p>
             </div>
-            <div className="w-100    p-3">
+            <div className="w-100 p-3">
               <img
                 className="img-fluid"
                 src="https://bdcinternational.com/content/uploads/2021/09/frame.png"
-                alt=""
+                alt="world map "
               />
             </div>
           </div>

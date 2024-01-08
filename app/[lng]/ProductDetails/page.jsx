@@ -31,7 +31,7 @@ export default function Page({ params: { lng } }) {
     }, [categoryParam, productParam])
 
     return (
-        <div className='container mt-3 mb-5'>
+        <div  className={`container mt-3 mb-5 ${styles.details}`}>
             <div className='row'>
                 <div className="col-md-5 d-flex justify-content-center">
                     <div className={`${styles.card} card rounded-4 text-center shadow `}>

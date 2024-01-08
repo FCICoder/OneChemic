@@ -30,6 +30,11 @@
   left: 10%;
   right: 7%;
   height: fit-content;
+  font-family: 'Rubik', sans-serif;
+}
+
+#image-desc p{
+  font-family: 'Rubik', sans-serif;
 }
 
 #paginate-buttons > button:hover {
