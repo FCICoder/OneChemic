@@ -65,7 +65,7 @@ const Page = ({ params: { lng } }) => {
       <div style={{ backgroundColor: getBackgroundColor() ,height:'70px'}}>
 
           <h2 className="text-center py-2">
-            {lng == "en"&&(category)
+            {lng == "en"
               ? `${category}`
               : category == "Solevants" && lng === "ar"
               ? "المذيبات"

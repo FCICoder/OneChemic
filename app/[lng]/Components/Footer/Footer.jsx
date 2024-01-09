@@ -12,10 +12,10 @@ export const Footer = async ({ lng }) => {
 
   return (
     <div style={{ backgroundColor: "white" }}>
-      <div className="container-fluid  ps-3 pe-2 mt-2 py-2 shadow">
-        <div className="row mt-2 p-0 w-100">
-          <div className="col-lg-3 col-md-6 m-auto justify-content-center ">
-            <div className="">
+      <div className="container-fluid  px-auto mt-2 py-2 shadow">
+        <div className="row mt-2 p-0 w-100 d-flex justify-content-center align-items-center">
+          <div className="col-lg-3 col-md-6 m-auto d-flex justify-content-center align-items-center ">
+            <div className="my-2">
               <Image
                 src={logo.src}
                 width={200}
@@ -25,11 +25,11 @@ export const Footer = async ({ lng }) => {
               ></Image>
             </div>
           </div>
-          <div className="col-lg-3  col-md-6 ">
-            <h1 className={`${fStyle.responsiveText} ${fStyle.decorate}`}>
+          <div className="col-lg-3  col-md-6 d-flex flex-column align-items-center ">
+            <h1 className={`${fStyle.responsiveText} ${fStyle.decorate} `}>
               {t("part9")}
             </h1>
-            <p className={`${fStyle.address} mt-3 `}>
+            <p className={`${fStyle.address} mt-3 text-center`}>
               <i className=" fas fa-location-dot me-2 text-muted"></i>
               {t("part10")}
               {t("part11")}
@@ -65,7 +65,7 @@ export const Footer = async ({ lng }) => {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6 ">
+          <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center ">
             <h1 className={`${fStyle.responsiveText} ${fStyle.decorate} mx-2`}>
               {t("part6")}
             </h1>
@@ -102,12 +102,13 @@ export const Footer = async ({ lng }) => {
               </li>
               <li></li>
             </ul>
-            <div className=" ">
-              <h1
+            <h1
                 className={`${fStyle.responsiveText} ${fStyle.decorate} mx-2`}
               >
                { t('part23')}
               </h1>
+            <div className=" ">
+            
               <div className="d-flex">
                 <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                   <i className="fa fa-phone me-2 "></i>
@@ -123,17 +124,17 @@ export const Footer = async ({ lng }) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 ">
+          <div className="col-lg-3 col-md-6 d-flex flex-column align-items-center ">
             <h1 className={`${fStyle.responsiveText}  ${fStyle.decorate} mx-2`}>
               {t("part1")}
             </h1>
-            <ul className="list-unstyled p-2 m-1">
-              <li>
-                <Link href="#" className={`${fStyle.responsiveLink}`}>
+            <ul className="list-unstyled p-2 mb-4 fst-italic">
+              <li className="mt-1">
+                <Link href="#" className={`${fStyle.responsiveLink} `}>
                   {t("part2")}
                 </Link>
               </li>
-              <li>
+              <li  className="mt-1">
                 <Link
                   href={`/${lng}/about-us`}
                   className={`${fStyle.responsiveLink}`}
@@ -141,16 +142,16 @@ export const Footer = async ({ lng }) => {
                   {t("part3")}
                 </Link>
               </li>
-              <li>
+              <li  className="mt-1">
                 <Link
                   href={`/${lng}/Contactus`}
-                  className={`${fStyle.responsiveLink}`}
+                  className={`${fStyle.responsiveLink} `}
                 >
                   {t("part4")}
                 </Link>
               </li>
-              <li>
-                <Link href={`/${lng}/`} className={`${fStyle.responsiveLink}`}>
+              <li className="mt-1">
+                <Link href={`/${lng}/`} className={`${fStyle.responsiveLink} `}>
                   {t("part5")}
                 </Link>
               </li>
@@ -158,7 +159,7 @@ export const Footer = async ({ lng }) => {
           </div>
         </div>
         <hr style={{color:"GrayText"}}></hr>
-        <div className="d-md-flex justify-content-center px-5 ">
+        <div className="d-flex justify-content-center ">
           <div>
             <span
               className={`${fStyle.address}  text-dark `}

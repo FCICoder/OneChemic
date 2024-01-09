@@ -19,7 +19,7 @@
   cursor: default;
   color: gray;
   text-decoration: underline;
-  text-underline-offset: 7px;
+  text-underline-offset: 9px;
   text-decoration-color: rgb(46, 149, 158);
 } 
 
@@ -45,12 +45,12 @@
 }
 @media only screen and (max-width: 768px) {
   .responsiveText {
-    font-size: 3.2vw;
+    font-size:4.5vw;
   }
 
   .responsiveLink {
     text-decoration: none;
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
   .address {
     font-size: 2.2vw;
@@ -59,14 +59,14 @@
 
 @media only screen and (max-width: 480px) {
   .responsiveText {
-    font-size: 3.8vw;
+    font-size: 4.1vw;
   }
 
   .responsiveLink {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
   .address {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 }
 
@@ -79,7 +79,7 @@
     font-size: 3.5vw;
   }
   .address {
-    font-size: 4vw;
+    font-size: 2.9vw;
   }
   .icons{
     font-size: 3vw;
