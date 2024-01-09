@@ -20,7 +20,7 @@ export const Footer = async ({ lng }) => {
                 src={logo.src}
                 width={200}
                 height={200}
-                className="rounded-circle img-fluid bg-light"
+                className="rounded-circle img-fluid"
                 alt="one Chemic logo"
               ></Image>
             </div>

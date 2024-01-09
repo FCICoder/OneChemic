@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
-import img from "../../../../assets/logo5.png";
+import img from "../../../../assets/head-logo.png";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { languages } from "../../../i18n/settings";
