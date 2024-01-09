@@ -30,7 +30,7 @@ export const Footer = async ({ lng }) => {
               {t("part9")}
             </h1>
             <p className={`${fStyle.address} mt-3 `}>
-              <i className=" fas fa-location-dot me-2"></i>
+              <i className=" fas fa-location-dot me-2 text-muted"></i>
               {t("part10")}
               {t("part11")}
               {t("part12")}
