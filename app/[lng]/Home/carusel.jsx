@@ -7,7 +7,6 @@ import img1 from '../../../assets/slider/1.jpg'
 import img2 from '../../../assets/slider/2.jpg'
 import img3 from '../../../assets/slider/3.jpg'
 import img4 from '../../../assets/slider/4.jpg'
-import img5 from '../../../assets/slider/5.jpg'
 import Image from 'next/image';
 import styles from './home.module.css'
 function SampleNextArrow(props) {
@@ -68,9 +67,6 @@ function Carusel() {
                     <img src={img4.src} alt='One chemic slider image 4' className=' m-auto img-fluid ' style={{height:'400px',width:'90%',borderRadius:'20px'}}  />
                 </div>
 
-                <div className={`${styles.image}  text-center`}>
-                    <img src={img5.src} alt='One chemic slider image 5' className=' m-auto img-fluid ' style={{height:'400px',width:'90%',borderRadius:'20px'}}  />
-                </div>
             </Slider>
         </div>
 

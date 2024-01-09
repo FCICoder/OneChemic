@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import fStyle from "./footer.module.css";
 import logo from "../../../../assets/logo3.png";
+import insta from "../../../../assets/instagram.png";
 import { useTranslation } from "../../../i18n";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { languages } from "../../../i18n/settings";
@@ -41,7 +42,10 @@ export const Footer = async ({ lng }) => {
                 <i className="fa fa-phone me-2 "></i>
                 {t("part21")}
               </p>
-              <a href="tel:+20102241805" className="text-decoration-none mt-auto ">
+              <a
+                href="tel:+20102241805"
+                className="text-decoration-none mt-auto "
+              >
                 <p className={`${fStyle.responsiveLink}  me-2   `}>
                   {lng === "en"
                     ? "(+20 ) 10 22 64 1805"
@@ -76,7 +80,10 @@ export const Footer = async ({ lng }) => {
                     <i className="fa fa-phone me-2 "></i>
                     {t("part21")}
                   </p>
-                  <a href="tel:+201010207764" className="text-decoration-none  mt-auto  ">
+                  <a
+                    href="tel:+201010207764"
+                    className="text-decoration-none  mt-auto  "
+                  >
                     <p className={`${fStyle.responsiveLink}  me-2 `}>
                       {lng == "en"
                         ? "(+20 ) 10 10 20 7764"
@@ -91,7 +98,10 @@ export const Footer = async ({ lng }) => {
                     <i className="fa fa-phone me-2 "></i>
                     {t("part21")}
                   </p>
-                  <a href="tel:+201010202218" className="text-decoration-none  mt-auto  ">
+                  <a
+                    href="tel:+201010202218"
+                    className="text-decoration-none  mt-auto  "
+                  >
                     <p className={`${fStyle.responsiveLink}  me-2    `}>
                       {lng == "en"
                         ? "(+20 ) 10 10 20 2218"
@@ -102,19 +112,19 @@ export const Footer = async ({ lng }) => {
               </li>
               <li></li>
             </ul>
-            <h1
-                className={`${fStyle.responsiveText} ${fStyle.decorate} mx-2`}
-              >
-               { t('part23')}
-              </h1>
+            <h1 className={`${fStyle.responsiveText} ${fStyle.decorate} mx-2`}>
+              {t("part23")}
+            </h1>
             <div className=" ">
-            
               <div className="d-flex">
                 <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                   <i className="fa fa-phone me-2 "></i>
                   {t("part21")}
                 </p>
-                <a href="tel:+201070097779" className="text-decoration-none   mt-auto ">
+                <a
+                  href="tel:+201070097779"
+                  className="text-decoration-none   mt-auto "
+                >
                   <p className={`${fStyle.responsiveLink}  me-2   `}>
                     {lng === "en"
                       ? "(+20 ) 10 70 09 7779"
@@ -128,13 +138,8 @@ export const Footer = async ({ lng }) => {
             <h1 className={`${fStyle.responsiveText}  ${fStyle.decorate} mx-2`}>
               {t("part1")}
             </h1>
-            <ul className="list-unstyled p-2 mb-4 fst-italic">
+            <ul className="list-unstyled p-2 mb-3 fst-italic">
               <li className="mt-1">
-                <Link href="#" className={`${fStyle.responsiveLink} `}>
-                  {t("part2")}
-                </Link>
-              </li>
-              <li  className="mt-1">
                 <Link
                   href={`/${lng}/about-us`}
                   className={`${fStyle.responsiveLink}`}
@@ -142,7 +147,7 @@ export const Footer = async ({ lng }) => {
                   {t("part3")}
                 </Link>
               </li>
-              <li  className="mt-1">
+              <li className="mt-1">
                 <Link
                   href={`/${lng}/Contactus`}
                   className={`${fStyle.responsiveLink} `}
@@ -156,14 +161,28 @@ export const Footer = async ({ lng }) => {
                 </Link>
               </li>
             </ul>
+            <div>
+              <a
+                href="#"
+                className="text-decoration-none   mt-auto "
+                target="_blank"
+              >
+                <i className="fa-brands fa-facebook mx-2 fa-2xl"></i>{" "}
+              </a>
+              <a
+                href="#"
+                className="text-decoration-none   mt-auto "
+                target="_blank"
+              >
+                <img src={insta.src} width={30} height={30} alt='instagram logo'></img>
+              </a>
+            </div>
           </div>
         </div>
-        <hr style={{color:"GrayText"}}></hr>
+        <hr style={{ color: "GrayText" }}></hr>
         <div className="d-flex justify-content-center ">
           <div>
-            <span
-              className={`${fStyle.address}  text-dark `}
-            >
+            <span className={`${fStyle.address}  text-dark `}>
               {" "}
               {t("part14")}
             </span>
