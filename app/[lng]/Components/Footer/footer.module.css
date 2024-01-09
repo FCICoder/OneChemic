@@ -7,7 +7,9 @@
   height: 60px;
   background-color: rgb(88, 95, 192);
 }
-
+.icons{
+  font-size: smaller;
+}
 .responsiveText {
   color: rgb(0, 0, 0);
   font-size: 1.7vw;
@@ -50,7 +52,7 @@
     text-decoration: none;
     font-size: 2.2vw;
   }
-  .responsiveLink {
+  .address {
     font-size: 2.2vw;
   }
 }
@@ -63,7 +65,7 @@
   .responsiveLink {
     font-size: 3.5vw;
   }
-  .responsiveLink {
+  .address {
     font-size: 3.5vw;
   }
 }
@@ -74,9 +76,12 @@
   }
 
   .responsiveLink {
-    font-size: 4.2vw;
+    font-size: 3.5vw;
   }
-  .responsiveLink {
-    font-size: 4.2vw;
+  .address {
+    font-size: 4vw;
+  }
+  .icons{
+    font-size: 3vw;
   }
 }

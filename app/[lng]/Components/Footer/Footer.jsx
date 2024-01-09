@@ -12,7 +12,7 @@ export const Footer = async ({ lng }) => {
 
   return (
     <div style={{ backgroundColor: "white" }}>
-      <div className="container-fluid  px-5 mt-2 py-2 shadow">
+      <div className="container-fluid  ps-3 pe-2 mt-2 py-2 shadow">
         <div className="row mt-2 p-0 w-100">
           <div className="col-lg-3 col-md-6 m-auto justify-content-center ">
             <div className="">
@@ -37,11 +37,11 @@ export const Footer = async ({ lng }) => {
               {t("part13")}
             </p>
             <div className="d-flex mt-1 mb-1">
-              <p className="me-1 text-muted  mt-1">
+              <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                 <i className="fa fa-phone me-2 "></i>
                 {t("part21")}
               </p>
-              <a href="tel:+20102241805" className="text-decoration-none ">
+              <a href="tel:+20102241805" className="text-decoration-none mt-auto ">
                 <p className={`${fStyle.responsiveLink}  me-2   `}>
                   {lng === "en"
                     ? "(+20 ) 10 22 64 1805"
@@ -50,13 +50,13 @@ export const Footer = async ({ lng }) => {
               </a>
             </div>
             <div className="d-flex  mb-1">
-              <p className="me-1 text-muted mt-1">
+              <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                 <i className="fas fa-envelope me-2 text-muted "></i>{" "}
                 {t("part22")}
               </p>
               <a
                 href="mailto:info@onechemic.com"
-                className="text-decoration-none text-muted "
+                className="text-decoration-none text-muted   mt-auto "
               >
                 <p className={`${fStyle.responsiveLink}  me-2  `}>
                   info@onechemic.com
@@ -72,11 +72,11 @@ export const Footer = async ({ lng }) => {
             <ul className="list-unstyled p-1 m-1">
               <li>
                 <div className="d-flex ">
-                  <p className="me-1 text-muted  mt-1">
+                  <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                     <i className="fa fa-phone me-2 "></i>
                     {t("part21")}
                   </p>
-                  <a href="tel:+201010207764" className="text-decoration-none ">
+                  <a href="tel:+201010207764" className="text-decoration-none  mt-auto  ">
                     <p className={`${fStyle.responsiveLink}  me-2 `}>
                       {lng == "en"
                         ? "(+20 ) 10 10 20 7764"
@@ -87,11 +87,11 @@ export const Footer = async ({ lng }) => {
               </li>
               <li>
                 <div className="d-flex">
-                  <p className="me-1 text-muted  mt-1">
+                  <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                     <i className="fa fa-phone me-2 "></i>
                     {t("part21")}
                   </p>
-                  <a href="tel:+201010202218" className="text-decoration-none ">
+                  <a href="tel:+201010202218" className="text-decoration-none  mt-auto  ">
                     <p className={`${fStyle.responsiveLink}  me-2    `}>
                       {lng == "en"
                         ? "(+20 ) 10 10 20 2218"
@@ -109,11 +109,11 @@ export const Footer = async ({ lng }) => {
                { t('part23')}
               </h1>
               <div className="d-flex">
-                <p className="me-1 text-muted  mt-1">
+                <p className={`me-1 text-muted  mt-1 ${fStyle.icons}`}>
                   <i className="fa fa-phone me-2 "></i>
                   {t("part21")}
                 </p>
-                <a href="tel:+201070097779" className="text-decoration-none ">
+                <a href="tel:+201070097779" className="text-decoration-none   mt-auto ">
                   <p className={`${fStyle.responsiveLink}  me-2   `}>
                     {lng === "en"
                       ? "(+20 ) 10 70 09 7779"
@@ -162,7 +162,6 @@ export const Footer = async ({ lng }) => {
           <div>
             <span
               className={`${fStyle.address}  text-dark `}
-              style={{ fontWeight: "100" }}
             >
               {" "}
               {t("part14")}
