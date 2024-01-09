@@ -4,14 +4,14 @@ import products from '../Category/products.json'
 import styles from './prdDetails.module.css'
 export default function Page({ params: { lng } }) {
     const [product, setProduct] = useState('');
-    let prd , categoryParam ,productParam;
+    let prd, categoryParam, productParam;
 
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const urlSearchParams = new URLSearchParams(window.location.search);
-             productParam = urlSearchParams.get("product");
-             categoryParam = urlSearchParams.get("category");
+            productParam = urlSearchParams.get("product");
+            categoryParam = urlSearchParams.get("category");
             if (categoryParam && productParam) {
                 prd = products[categoryParam].filter((prd) => prd.id == productParam)
                 setProduct(prd);
@@ -31,7 +31,7 @@ export default function Page({ params: { lng } }) {
     }, [categoryParam, productParam])
 
     return (
-        <div  className={`container mt-3 mb-5 ${styles.details}`}>
+        <div className={`container mt-3 mb-5 ${styles.details}`}>
             <div className='row'>
                 <div className="col-md-5 d-flex justify-content-center">
                     <div className={`${styles.card} card rounded-4 text-center shadow `}>
@@ -66,8 +66,39 @@ export default function Page({ params: { lng } }) {
                                 <p className='text-lowercase text-black-50' dangerouslySetInnerHTML={{ __html: product[0]?.ar.description }} ></p>
 
                             </>)}
+
                     </div>
 
+                    <div className='mt-4 shadow'>
+                        <h3>
+                            {(lng == 'en') ? 'Properties' : 'الخصائص'}
+                        </h3>
+                        {lng == 'en' ? (
+                            <ul
+                                dangerouslySetInnerHTML={{ __html: product[0]?.en.Properties }}>
+                            </ul>
+                        ) : (
+                            <ul
+                                dangerouslySetInnerHTML={{ __html: product[0]?.ar.Properties }} >
+                            </ul>
+                        )}
+
+                    </div>
+                    <div className='mt-4 shadow'>
+                        <h3>
+                            {(lng == 'en') ? 'Application Areas' : 'مجالات التطبيق'}
+                        </h3>
+                        {lng == 'en' ? (
+                            <ul
+                                dangerouslySetInnerHTML={{ __html: product[0]?.en.application }}>
+                            </ul>
+                        ) : (
+                            <ul
+                                dangerouslySetInnerHTML={{ __html: product[0]?.ar.application }} >
+                            </ul>
+                        )}
+
+                    </div>
                 </div>
             </div>
         </div>
