@@ -3,7 +3,8 @@ import React from "react";
 import style from "./page.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Helmet } from "react-helmet";
+import { HelmetProvider ,Helmet } from "react-helmet-async";
+
 export default function Page({ params: { lng } }) {
   var myLang = lng;
 
@@ -28,6 +29,8 @@ export default function Page({ params: { lng } }) {
   });
   return (
     <>
+    <HelmetProvider>
+
       <Helmet>
         <title>{(lng == 'en') ? 'Contact us' : 'تواصل معنا'}</title>
       </Helmet>
@@ -166,6 +169,7 @@ export default function Page({ params: { lng } }) {
           </div>
         </div>
       </section>
+      </HelmetProvider>
     </>
   );
 }
