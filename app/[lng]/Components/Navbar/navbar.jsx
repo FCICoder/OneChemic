@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import img from "../../../../assets/head-logo.png";
@@ -12,7 +12,6 @@ if (typeof document !== 'undefined') {
 export const Navbar = ({ lng }) => {
   var myLang = lng;
   const router = usePathname();
-
 
   function select(e) {
     if (window.location.search !== e.target.search) {
@@ -80,7 +79,7 @@ export const Navbar = ({ lng }) => {
                     </Link>
                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                       <Link
-                        className="dropdown-item"
+                        className={`dropdown-item ${styles.drop}`}
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Solevants" },
@@ -89,7 +88,7 @@ export const Navbar = ({ lng }) => {
                       >
                         {(lng == 'en') ? 'Solevants' : 'المذيبات '}
                       </Link>
-                      <Link className="dropdown-item"
+                      <Link className={`dropdown-item ${styles.drop}`}
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Polymers" },
@@ -98,7 +97,7 @@ export const Navbar = ({ lng }) => {
                       >
                         {(lng == 'en') ? 'Polymers' : 'البوليمرات '}
                       </Link>
-                      <Link className="dropdown-item"
+                      <Link className={`dropdown-item ${styles.drop}`}
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Chemical Additives and Processing Aids" },
@@ -107,7 +106,7 @@ export const Navbar = ({ lng }) => {
                       >
                         {(lng == 'en') ? 'Chemical Additives and Processing Aids' : 'المضافات الكيميائية ومساعدات المعالجة '}
                       </Link>
-                      <Link className="dropdown-item"
+                      <Link className={`dropdown-item ${styles.drop}`}
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Preservatives and Chemical Processing" },
@@ -116,7 +115,7 @@ export const Navbar = ({ lng }) => {
                       >
                         {(lng == 'en') ? 'Preservatives and Chemical Processing' : 'المواد الحافظة والمعالجة الكيميائية '}
                       </Link>
-                      <Link className="dropdown-item"
+                      <Link className={`dropdown-item ${styles.drop}`}
                         href={{
                           pathname: `/${lng}/Category`,
                           query: { category: "Pigments and Fillers" },

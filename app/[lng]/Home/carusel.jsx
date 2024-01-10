@@ -47,7 +47,7 @@ function Carusel() {
 
     };
     return (
-        <div className="container">
+        <div className="container" >
             <Slider {...settings} className='m-auto  mt-4  ' style={{width:'84%'}} >
                 <div className={`${styles.image}  text-center `}>
 

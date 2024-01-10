@@ -67,6 +67,21 @@ export default function Page({ params: { lng } }) {
                 info@onechemic.com
               </a>
             </div>
+
+            <div className="mt-3  text-center"> 
+              <a
+                href="https://www.facebook.com/onechemic"
+                className="text-decoration-none   mt-auto "
+                target="_blank" >
+                <i className="fa-brands fa-facebook mx-2 fa-xl"></i>
+              </a>
+              <a
+                href="https://twitter.com/onechemic"
+                className="text-decoration-none   mt-auto "
+                target="_blank" >
+                <i className="fa-brands fa-x-twitter mx-2 fa-xl text-dark"></i>
+              </a>
+            </div>
           </div>
 
           <div className="col-md-7">

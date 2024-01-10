@@ -163,18 +163,18 @@ export const Footer = async ({ lng }) => {
             </ul>
             <div>
               <a
-                href="#"
+                href="https://www.facebook.com/onechemic"
                 className="text-decoration-none   mt-auto "
                 target="_blank"
               >
-                <i className="fa-brands fa-facebook mx-2 fa-2xl"></i>{" "}
+                <i className="fa-brands fa-facebook mx-2 fa-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://twitter.com/onechemic"
                 className="text-decoration-none   mt-auto "
                 target="_blank"
               >
-                <img src={insta.src} width={30} height={30} alt='instagram logo'></img>
+                <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
             </div>
           </div>

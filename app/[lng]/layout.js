@@ -14,7 +14,6 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
 
-
 export default function RootLayout({
   children,
   params: {
@@ -23,8 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <>
-
-
       <html lang={lng} dir={dir(lng)}>
         <Head>
           <link

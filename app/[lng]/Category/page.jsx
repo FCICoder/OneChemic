@@ -29,21 +29,6 @@ const Page = ({ params: { lng } }) => {
     }
   }, []);
 
-  // function select(e){
-
-  //   // setTimeout(()=>{
-  //   //   console.log(e);
-  //   //   console.log(window.location);
-  //   //   console.log(e.target.baseURI);
-  //   //   console.log(e.target.baseURI);
-  //   //   if(window.location.href === e.target.baseURI ){
-  //   //     // window.location.href = e.target.baseURI
-  //   //     location.reload();
-  //   //     console.log('qewwqqqqqqq');
-  //   //   }
-  //   // },1000)
-
-  // }
   const getBackgroundColor = () => {
     if (category === "Solevants" ) {
       return "blue";
@@ -64,7 +49,7 @@ const Page = ({ params: { lng } }) => {
       <div>
       <div style={{ backgroundColor: getBackgroundColor() ,height:'70px'}}>
 
-          <h2 className="text-center py-2">
+          <h2 className="text-center py-2 text-light">
             {lng == "en"
               ? `${category}`
               : category == "Solevants" && lng === "ar"
@@ -79,7 +64,7 @@ const Page = ({ params: { lng } }) => {
               ? 'المواد الحافظة والمعالجة الكيميائية '
               : category == "Pigments and Fillers" && lng === "ar"
               ? 'الأصباغ والحشو '
-              : "........"}
+              : "Loading..."}
           </h2> 
         </div>
         <div className="container mt-3">
@@ -92,7 +77,6 @@ const Page = ({ params: { lng } }) => {
                       pathname: `/${lng}/ProductDetails`,
                       query: { product: `${item.id}`, category: `${category}` },
                     }}
-                    // onClick={(e)=>select(e)}
                   >
                     <div
                       className={`${styles.card} card rounded-4  text-center shadow`}

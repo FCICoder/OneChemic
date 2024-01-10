@@ -6,7 +6,6 @@ export default function Page({ params: { lng } }) {
     const [product, setProduct] = useState('');
     let prd, categoryParam, productParam;
 
-
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const urlSearchParams = new URLSearchParams(window.location.search);
@@ -17,7 +16,6 @@ export default function Page({ params: { lng } }) {
                 setProduct(prd);
             }
         }
-
     }, [])
 
     useEffect(() => {

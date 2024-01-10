@@ -55,3 +55,15 @@
     font-weight: 600 !important;
     background-color: rgb(255, 255, 255) !important;
 }
+
+@media (max-width: 435px) {
+    .drop {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 318px) {
+    .drop {
+        font-size: 8px !important;
+    }
+}
