@@ -50,22 +50,22 @@ function Carusel() {
             <Slider {...settings} className='m-auto  mt-4  ' style={{width:'100%'}} >
                 <div className={`${styles.image}  text-center `}>
 
-                    <img src={img1.src} alt='One chemic slider image 1' className='m-auto img-fluid ' style={{height:'400px',width:'100%'}}  />
+                    <img src={img1.src} alt='One chemic slider image 1' className='m-auto img-fluid ' />
 
                 </div>
 
                 <div className={`${styles.image}  text-center`}>
-                    <img src={img2.src} alt='One chemic slider image 2' className=' m-auto img-fluid ' style={{height:'400px',width:'100%'}}  />
+                    <img src={img2.src} alt='One chemic slider image 2' className=' m-auto img-fluid ' />
                 </div>
 
                 <div className={`${styles.image}  text-center`}>
-                    <img src={img3.src} alt='One chemic slider image 3' className=' m-auto img-fluid ' style={{height:'400px',width:'100%'}}  />
+                    <img src={img3.src} alt='One chemic slider image 3' className=' m-auto img-fluid ' />
                 </div>
 
                 <div className={`${styles.image}  text-center`}>
-                    <img src={img4.src} alt='One chemic slider image 4' className=' m-auto img-fluid ' style={{height:'400px',width:'100%'}}  />
+                    <img src={img4.src} alt='One chemic slider image 4' className=' m-auto img-fluid ' />
                 </div>
-
+        {/* ewfwefwefwefwefwe */}
             </Slider>
         </div>
 
