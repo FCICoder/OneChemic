@@ -46,7 +46,7 @@ function Carusel() {
 
     };
     return (
-        <div className="container-fluid overflow-hidden"  >
+        <div className=" overflow-hidden"  >
             <Slider {...settings} className='m-auto  mt-4  ' style={{width:'100%'}} >
                 <div className={`${styles.image}  text-center `}>
 
