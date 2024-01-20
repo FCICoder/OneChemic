@@ -65,7 +65,6 @@ function Carusel() {
                 <div className={`${styles.image}  text-center`}>
                     <img src={img4.src} alt='One chemic slider image 4' className=' m-auto img-fluid h-100' />
                 </div>
-        {/* ewfwefwefwefwefwe */}
             </Slider>
         </div>
 
