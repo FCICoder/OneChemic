@@ -57,7 +57,7 @@ function Carusel() {
                 <div className={`${styles.image}  text-center`}>
                     <img src={img2.src} alt='One chemic slider image 2' className=' m-auto img-fluid h-100' />
                 </div>
-
+{/* errew */}
                 <div className={`${styles.image}  text-center`}>
                     <img src={img3.src} alt='One chemic slider image 3' className=' m-auto img-fluid h-100' />
                 </div>
