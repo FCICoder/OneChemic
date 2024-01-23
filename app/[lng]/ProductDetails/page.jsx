@@ -28,6 +28,18 @@ export default function Page({ params: { lng } }) {
     }
   }, [categoryParam, productParam]);
 
+  const handleFacebookShare = () => {
+    const shareUrl = encodeURIComponent(window.location.href);
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    window.open(facebookShareUrl, '_blank');
+  };
+
+  const handleTwitterShare = () => {
+    const shareUrl = encodeURIComponent(window.location.href);
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}`;
+    window.open(twitterShareUrl, '_blank');
+  };
+
   return (
     <div className={`container mt-3 mb-5 ${styles.details}`}>
       <div className="row">
@@ -45,16 +57,18 @@ export default function Page({ params: { lng } }) {
             </div>
             <div className="py-3">
               <a
-                href="https://www.facebook.com/onechemic"
+                href="#"
                 className="text-decoration-none   mt-auto "
                 target="_blank"
+                onClick={handleFacebookShare}
               >
                 <i className="fa-brands fa-facebook mx-2 fa-2xl"></i>
               </a>
               <a
-                href="https://twitter.com/onechemic"
+                href="#"
                 className="text-decoration-none   mt-auto "
                 target="_blank"
+                onClick={handleTwitterShare}
               >
                 <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
