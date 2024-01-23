@@ -8,12 +8,13 @@ import img2 from '../../../assets/slider/2.jpg'
 import img3 from '../../../assets/slider/3.jpg'
 import img4 from '../../../assets/slider/4.jpg'
 import styles from './home.module.css'
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "black", borderRadius: '10px', }}
+            style={{ ...style, display: "block", background: "transparent",color:"red",outline: "none", borderRadius: '15px',position: 'absolute', right: '3%' }}
             onClick={onClick}
         />
     );
@@ -24,7 +25,7 @@ function SamplePrevArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "black", borderRadius: '10px' }}
+            style={{ ...style, display: "block", background: "black", borderRadius: '10px', position: 'absolute' }}
             onClick={onClick}
         />
     );
@@ -41,8 +42,9 @@ function Carusel() {
         autoplaySpeed: 1800,
         initialSlide: 0,
         lazyLoad: true,
-        // nextArrow: <SampleNextArrow />,
-        // prevArrow: <SamplePrevArrow />
+        swipeToSlide: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
 
     };
     return (
@@ -57,7 +59,7 @@ function Carusel() {
                 <div className={`${styles.image}  text-center`}>
                     <img src={img2.src} alt='One chemic slider image 2' className=' m-auto img-fluid h-100' />
                 </div>
-{/* errew */}
+
                 <div className={`${styles.image}  text-center`}>
                     <img src={img3.src} alt='One chemic slider image 3' className=' m-auto img-fluid h-100' />
                 </div>

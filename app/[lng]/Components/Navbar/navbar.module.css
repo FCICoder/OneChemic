@@ -60,6 +60,9 @@
     .drop {
         font-size: 11px !important;
     }
+    .image  {
+    width: 90px !important ;
+    }
 }
 
 @media (max-width: 318px) {

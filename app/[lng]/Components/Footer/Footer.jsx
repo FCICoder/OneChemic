@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import fStyle from "./footer.module.css";
 import logo from "../../../../assets/logo3.png";
-import insta from "../../../../assets/instagram.png";
+// import insta from "../../../../assets/instagram.png";
 import { useTranslation } from "../../../i18n";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { languages } from "../../../i18n/settings";

@@ -21,14 +21,14 @@ export const Navbar = ({ lng }) => {
   return (
     <>
       <section>
-        <nav className={`navbar navbar-expand-sm navbar-light shadow ${styles.nav}`}>
+        <nav className={`navbar navbar-expand-md navbar-light shadow ${styles.nav}`}>
           <div className="container">
             <div className={`${styles.image}`}>
               <Link className="navbar-brand" href={`/${lng}`}>
                 <Image src={img} alt="OneChemic logo" className="img-fluid" />
               </Link>
             </div>
-            <div className={`${styles.language} d-block d-sm-none `}>
+            <div className={`${styles.language} d-block d-md-none `}>
               {languages
                 .filter((l) => lng !== l)
                 .map((l, index) => {
@@ -144,21 +144,39 @@ export const Navbar = ({ lng }) => {
                       {myLang == "en" ? "Contactus" : "تواصل معنا"}
                     </Link>
                   </li>{" "}
-                
-                </ul>
+                <div className="ms-md-2 mx-0">
+                  <div className="d-flex align-itmes-center justify-content-center  h-100 mt-1 mt-md-0 ms-md-0 mx-0">
+                   <a
+                      href="https://www.facebook.com/onechemic"
+                      className="text-decoration-none   mt-auto my-auto "
+                      target="_blank"
+                    >
+                      <i className="fa-brands fa-facebook mx-2 fa-xl"></i>
+                    </a>
+                    <a
+                      href="https://twitter.com/onechemic"
+                      className="text-decoration-none   mt-auto my-auto"
+                      target="_blank"
+                    >
+                      <i className="fa-brands fa-x-twitter mx-2 fa-xl text-dark"></i>
+                    </a>
+                  </div>
 
+                </div>
+
+                </ul>
 
               </div>
             </div>
-            <div className={`${styles.language} d-none d-sm-block `}>
+            <div className={`${styles.language} d-none d-md-block `}>
               {languages
                 .filter((l) => lng !== l)
                 .map((l, index) => {
                   return (
                     <span key={l} className=" w-100 container" style={{ fontSize: '14px' }}>
-                    {index > 0 && " or "}
-                    <Link className="text-dark    text-decoration-none" href={`/${l}`}>{lng == 'ar' ? "English" : "العربية"}</Link>
-                  </span>
+                      {index > 0 && " or "}
+                      <Link className="text-dark    text-decoration-none" href={`/${l}`}>{lng == 'ar' ? "English" : "العربية"}</Link>
+                    </span>
                   );
                 })}
             </div>
@@ -167,7 +185,6 @@ export const Navbar = ({ lng }) => {
 
 
       </section>
-      {/* { <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossOrigin="anonymous"></script>} */}
 
     </>
   );
