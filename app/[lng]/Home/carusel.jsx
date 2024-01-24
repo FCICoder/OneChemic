@@ -8,7 +8,6 @@ import img2 from '../../../assets/slider/2.jpg'
 import img3 from '../../../assets/slider/3.jpg'
 import img4 from '../../../assets/slider/4.jpg'
 import styles from './home.module.css'
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
