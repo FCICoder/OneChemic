@@ -75,7 +75,6 @@ export const Navbar = ({ lng }) => {
                       data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
-
                     >
                       {(lng == 'en') ? 'Categories' : ' الفئات'}
                     </Link>
