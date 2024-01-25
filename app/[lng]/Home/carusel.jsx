@@ -1,75 +1,94 @@
-'use client'
-import React from 'react'
+"use client";
+import React,{ useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
-import img1 from '../../../assets/slider/1.jpg'
-import img2 from '../../../assets/slider/2.jpg'
-import img3 from '../../../assets/slider/3.jpg'
-import img4 from '../../../assets/slider/4.jpg'
-import styles from './home.module.css'
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "transparent",color:"red",outline: "none", borderRadius: '15px',position: 'absolute', right: '3%' }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "black", borderRadius: '10px', position: 'absolute' }}
-            onClick={onClick}
-        />
-    );
-}
+import Slider from "react-slick";
+import img0 from "../../../assets/slider/1.jpg";
+import img1 from "../../../assets/slider/2.jpg";
+import img2 from "../../../assets/slider/3.jpg";
+import img3 from "../../../assets/slider/4.jpg";
+import styles from "./home.module.css";
+import Image from "next/image";
 
 function Carusel() {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 700,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1800,
-        initialSlide: 0,
-        lazyLoad: true,
-        swipeToSlide: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+  const  [sliderRef,setSliderRef] = useState(null)
+  const Cards = [
+    {
+      imageSrc: img0,
+      title: "oneChemic",
+      description: "One chemic slider images",
+    },
+    {
+      imageSrc: img1,
+      title: "oneChemic",
+      description: "one chemic slider images",
+    },
+    {
+      imageSrc: img2,
+      title: "oneChemic",
+      description: "one chemic slider images",
+    },
+    {
+      imageSrc: img3,
+      title: "oneChemic",
+      description: "one chemic slider images",
+    },
+  ];
 
-    };
-    return (
-        <div className=" overflow-hidden"  >
-            <Slider {...settings} className='m-auto  mt-4  ' style={{width:'100%'}} >
-                <div className={`${styles.image}  text-center `}>
 
-                    <img src={img1.src} alt='One chemic slider image 1' className='m-auto img-fluid h-100' />
-
-                </div>
-
-                <div className={`${styles.image}  text-center`}>
-                    <img src={img2.src} alt='One chemic slider image 2' className=' m-auto img-fluid h-100' />
-                </div>
-
-                <div className={`${styles.image}  text-center`}>
-                    <img src={img3.src} alt='One chemic slider image 3' className=' m-auto img-fluid h-100' />
-                </div>
-
-                <div className={`${styles.image}  text-center`}>
-                    <img src={img4.src} alt='One chemic slider image 4' className=' m-auto img-fluid h-100' />
-                </div>
-            </Slider>
-        </div>
-
-    )
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 700,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    initialSlide: 0,
+    lazyLoad: false,
+    swipeToSlide: true,
+  };
+  return (
+    <div className=" overflowX-hidden  position-relative ">
+      <Slider
+        ref={(slider) => setSliderRef(slider)}
+        {...settings}
+        className={`m-auto  mt-4  ${styles.slider}`}
+        style={{ width: "100%" }}
+      >
+        {Cards.map((item, index) => {
+          return (
+            <div className={`${styles.image}  text-center `} key={index}>
+              <Image
+                src={item.imageSrc}
+                alt={item.description}
+                width="100%"
+                height="100%"
+                className="m-auto img-fluid h-100"
+                priority={true}
+              />
+            </div>
+          );
+        })}
+      </Slider>
+      <button 
+      onClick={()=>sliderRef.slickNext()} 
+      className={` ${styles.nextbtn}`} 
+      >
+        <FaChevronRight />
+      </button>
+      <button 
+      onClick={()=>sliderRef.slickPrev()}
+      className={` ${styles.prevbtn}`} 
+      >
+        <FaChevronLeft />
+      </button>
+      
+    </div>
+  );
 }
 
-export default Carusel
+export default Carusel;
