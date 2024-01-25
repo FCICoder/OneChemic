@@ -50,7 +50,7 @@ function Swiper() {
     autoplay: true,
     autoplaySpeed: 2000,
     initialSlide: 0,
-    lazyLoad: false,
+    arrows:false,
     responsive: [
       {
         breakpoint: 900,
@@ -99,45 +99,6 @@ function Swiper() {
             </div>
           );
         })}
-        {/* <div className={`${styles.partners}  text-center `}>
-          <img
-            src={img1.src}
-            alt="One chemic swiper partners image 1"
-            className="m-auto img-fluid "
-          />
-        </div>
-
-        <div className={`${styles.partners}  text-center`}>
-          <img
-            src={img2.src}
-            alt="One chemic swiper partners image 2"
-            className=" m-auto img-fluid "
-          />
-        </div>
-
-        <div className={`${styles.partners}  text-center`}>
-          <img
-            src={img3.src}
-            alt="One chemic swiper partners image 3"
-            className=" m-auto img-fluid "
-          />
-        </div>
-
-        <div className={`${styles.partners}  text-center`}>
-          <img
-            src={img4.src}
-            alt="One chemic swiper partners image 4"
-            className=" m-auto img-fluid "
-          />
-        </div>
-
-        <div className={`${styles.partners}  text-center`}>
-          <img
-            src={img5.src}
-            alt="One chemic swiper partners image 5"
-            className=" m-auto img-fluid "
-          />
-        </div> */}
       </Slider>
 
       <button

@@ -112,7 +112,6 @@
     top: 55%;
     right: 0;
     z-index: 999;
-    /* color: aliceblue !important; */
     font-size: 30px;
     background-color: transparent;
     border: none !important;
@@ -122,7 +121,6 @@
     top: 55%;
     left: 0;
     z-index: 999;
-    /* color: aliceblue !important; */
     font-size: 30px;
     border: none !important;
     background-color: transparent;
@@ -133,7 +131,6 @@
     position: absolute;
     top: 55%;
     z-index: 999;
-    /* color: aliceblue !important; */
     font-size: 20px;
     background-color: transparent;
     border: none !important;
@@ -143,7 +140,6 @@
     top: 55%;
     left: 0;
     z-index: 999;
-    /* color: aliceblue !important; */
     font-size: 20px;
     border: none !important;
     background-color: transparent;
