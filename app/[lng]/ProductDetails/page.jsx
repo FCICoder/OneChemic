@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import products from "../Category/products.json";
 import styles from "./prdDetails.module.css";
 import { saveAs } from "file-saver";
+import { IoMdCloudDownload } from "react-icons/io";
 
 export default function Page({ params: { lng } }) {
   const [product, setProduct] = useState("");
@@ -77,8 +78,10 @@ export default function Page({ params: { lng } }) {
               >
                 <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
-              <button onClick={saveFile}>download</button>
+              <a onClick={saveFile}>
+              <IoMdCloudDownload className="fs-1" />
 
+              </a>
             </div>
           </div>
         </div>
