@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import products from "../Category/products.json";
 import styles from "./prdDetails.module.css";
+import { saveAs } from "file-saver";
+
 export default function Page({ params: { lng } }) {
   const [product, setProduct] = useState("");
   let prd, categoryParam, productParam;
@@ -31,15 +33,18 @@ export default function Page({ params: { lng } }) {
   const handleFacebookShare = () => {
     const shareUrl = encodeURIComponent(window.location.href);
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
-    window.open(facebookShareUrl, '_blank');
+    window.open(facebookShareUrl, "_blank");
   };
 
   const handleTwitterShare = () => {
     const shareUrl = encodeURIComponent(window.location.href);
     const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}`;
-    window.open(twitterShareUrl, '_blank');
+    window.open(twitterShareUrl, "_blank");
   };
+  const saveFile = () => {
+    saveAs("https://httpbin.org/image","image.jpg");
 
+  };
   return (
     <div className={`container mt-3 mb-5 ${styles.details}`}>
       <div className="row">
@@ -72,6 +77,8 @@ export default function Page({ params: { lng } }) {
               >
                 <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
+              <button onClick={saveFile}>download</button>
+
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ function Carusel() {
       >
         {Cards.map((item, index) => {
           return (
-            <div className={`${styles.image}  text-center `} key={index}>
+            <div className={`${styles.image}  text-center bg-dark `} key={index}>
               <Image
                 src={item.imageSrc}
                 alt={item.description}
