@@ -42,7 +42,7 @@ function Carusel() {
     infinite: true,
     arrows: false,
     speed: 700,
-    fade: true,
+    // fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -61,7 +61,7 @@ function Carusel() {
       >
         {Cards.map((item, index) => {
           return (
-            <div className={`${styles.image}  text-center bg-dark `} key={index}>
+            <div className={`${styles.image}  text-center `} key={index}>
               <Image
                 src={item.imageSrc}
                 alt={item.description}
