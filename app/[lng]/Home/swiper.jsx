@@ -77,7 +77,7 @@ function Swiper() {
     ],
   };
   return (
-    <div className="container mt-5 overflowX-hidden position-relative">
+    <div className="container mt-5 overflowX-hidden position-relative mb-5">
       <h2 className=" text-center fst-italic fw-bold ">OUR PARTNERS</h2>
       <Slider
         ref={(slider) => setSliderRef(slider)}
