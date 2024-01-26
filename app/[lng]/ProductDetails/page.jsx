@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import products from "../Category/products.json";
 import styles from "./prdDetails.module.css";
-import { saveAs } from "file-saver";
 import { IoMdCloudDownload } from "react-icons/io";
 
 export default function Page({ params: { lng } }) {
@@ -28,6 +27,7 @@ export default function Page({ params: { lng } }) {
       let categoryParam = urlSearchParams.get("category");
       prd = products[categoryParam].filter((prd) => prd.id == productParam);
       setProduct(prd);
+      console.log(prd);
     }
   }, [categoryParam, productParam]);
 
@@ -42,10 +42,7 @@ export default function Page({ params: { lng } }) {
     const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}`;
     window.open(twitterShareUrl, "_blank");
   };
-  const saveFile = () => {
-    saveAs("https://httpbin.org/image","image.jpg");
 
-  };
   return (
     <div className={`container mt-3 mb-5 ${styles.details}`}>
       <div className="row">
@@ -78,11 +75,11 @@ export default function Page({ params: { lng } }) {
               >
                 <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
-              <a onClick={saveFile}>
-              <IoMdCloudDownload className="fs-1" />
-
-              </a>
+         
             </div>
+    <a href={product[0]?.pdfUrl} target='_blank'>
+    <IoMdCloudDownload className="fs-1" />
+    </a>
           </div>
         </div>
         <div className="col-md-7">
