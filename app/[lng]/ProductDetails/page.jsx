@@ -78,7 +78,10 @@ export default function Page({ params: { lng } }) {
               >
                 <i className="fa-brands fa-x-twitter mx-2 fa-2xl text-dark"></i>
               </a>
+              <a onClick={saveFile}>
               <IoMdCloudDownload className="fs-1" />
+
+              </a>
             </div>
           </div>
         </div>
