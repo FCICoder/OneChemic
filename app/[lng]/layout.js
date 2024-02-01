@@ -78,7 +78,6 @@ export default function RootLayout({
           </head>       
         <Head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32"/>
-        <title >OneChemic</title>
           <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
