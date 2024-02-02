@@ -6,7 +6,6 @@ import img from "../../../../assets/head-logo.png";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { languages } from "../../../i18n/settings";
-import Search from "../Search/Search";
 if (typeof document !== 'undefined') {
   import('bootstrap/dist/js/bootstrap.bundle.js')
 }

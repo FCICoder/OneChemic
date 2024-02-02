@@ -30,7 +30,7 @@ const Page = ({ params: { lng } }) => {
   }, []);
 
   const getBackgroundColor = () => {
-    if (category === "Solevants" ) {
+    if (category === "Solevants") {
       return "blue";
     } else if (category === "Polymers") {
       return "rgb(127, 240, 57)";
@@ -47,8 +47,7 @@ const Page = ({ params: { lng } }) => {
   return (
     <>
       <div>
-      <div style={{ backgroundColor: getBackgroundColor() ,height:'70px'}}>
-
+        <div style={{ backgroundColor: getBackgroundColor(), height: "70px" }}>
           <h2 className="text-center py-2 text-light">
             {lng == "en"
               ? `${category}`
@@ -58,14 +57,14 @@ const Page = ({ params: { lng } }) => {
               ? "البوليمرات"
               : category == "Chemical Additives and Processing Aids" &&
                 lng === "ar"
-              ? 'المضافات الكيميائية ومساعدات المعالجة '
+              ? "المضافات الكيميائية ومساعدات المعالجة "
               : category == "Preservatives and Chemical Processing" &&
                 lng === "ar"
-              ? 'المواد الحافظة والمعالجة الكيميائية '
+              ? "المواد الحافظة والمعالجة الكيميائية "
               : category == "Pigments and Fillers" && lng === "ar"
-              ? 'الأصباغ والحشو '
+              ? "الأصباغ والحشو "
               : "Loading..."}
-          </h2> 
+          </h2>
         </div>
         <div className="container mt-3">
           <div className="row">
@@ -73,11 +72,13 @@ const Page = ({ params: { lng } }) => {
               myProducts[category]?.map((item, index) => (
                 <div key={index} className="col-md-4 mb-4 ">
                   <Link
+                    className="text-decoration-none m-auto"
                     href={{
                       pathname: `/${lng}/ProductDetails`,
                       query: { product: `${item.id}`, category: `${category}` },
                     }}
                   >
+                    <div id="big-card">
                     <div
                       className={`${styles.card} card rounded-4  text-center shadow`}
                     >
@@ -87,10 +88,14 @@ const Page = ({ params: { lng } }) => {
                             src={item.ImageUrl}
                             className={`img-fluid ${styles.image}`}
                             alt="ImageCard"
-                            style={{ height: "270px", borderRadius: "20px" }}
+                            style={{ height: "83%" ,borderRadius: "20px" , width: "97%", }}
                           />
                         )}
-                        {lng === "en" ? (
+                        
+                      </div>
+                      
+                    </div>
+                    {lng === "en" ? (
                           <>
                             <h5 className="card-title mt-4">{item.en.title}</h5>
                             {/* <p className="card-title">{item.en.description}</p> */}
@@ -102,8 +107,8 @@ const Page = ({ params: { lng } }) => {
                             <h5 className="card-title">{item.ar.title}</h5>
                           </>
                         )}
-                      </div>
                     </div>
+                    
                   </Link>
                 </div>
               ))}

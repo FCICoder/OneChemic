@@ -53,29 +53,13 @@ export default function Page({ params: { lng } }) {
                   src={product[0]?.ImageUrl}
                   className={`${styles.image} img-fluid `}
                   alt="ImageCard"
-                  style={{ height: "260px", borderRadius: "20px" }}
+                  style={{ height: "90%", borderRadius: "15px", width: "70%", }}
                 />
               )}
             </div>
             <div className="py-3  " id="social">
               <a href={product[0]?.pdfUrl} target="_blank">
-                <IoMdCloudDownload className="fs-1" />
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none   m-auto "
-                target="_blank"
-                onClick={handleFacebookShare}
-              >
-                <i className="fa-brands fa-facebook  fa-2xl"></i>
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none   m-auto "
-                target="_blank"
-                onClick={handleTwitterShare}
-              >
-                <i className="fa-brands fa-x-twitter  fa-2xl text-dark"></i>
+                <IoMdCloudDownload className="" style={{fontSize:"30px"}} />
               </a>
             </div>
           </div>
@@ -84,7 +68,9 @@ export default function Page({ params: { lng } }) {
           <div className="mt-4 shadow-lg rounded-5  p-4">
             {lng === "en" ? (
               <>
-                <h3 className="card-title  mb-4 text-primary ">{product[0]?.en.title}</h3>
+                <h3 className="card-title  mb-4 text-primary ">
+                  {product[0]?.en.title}
+                </h3>
                 {/* <p className='text-lowercase'>
                         </p> */}
                 <p
@@ -110,7 +96,9 @@ export default function Page({ params: { lng } }) {
           </div>
 
           <div className="mt-4 shadow-lg p-4 rounded-5 ">
-            <h3 className="text-primary">{lng == "en" ? "Properties" : "الخصائص"}</h3>
+            <h3 className="text-primary">
+              {lng == "en" ? "Properties" : "الخصائص"}
+            </h3>
             {lng == "en" ? (
               <ul
                 dangerouslySetInnerHTML={{ __html: product[0]?.en.Properties }}
@@ -122,7 +110,9 @@ export default function Page({ params: { lng } }) {
             )}
           </div>
           <div className="mt-4 shadow-lg p-4 rounded-5">
-            <h3 className="text-primary">{lng == "en" ? "Application Areas" : "مجالات التطبيق"}</h3>
+            <h3 className="text-primary">
+              {lng == "en" ? "Application Areas" : "مجالات التطبيق"}
+            </h3>
             {lng == "en" ? (
               <ul
                 dangerouslySetInnerHTML={{ __html: product[0]?.en.application }}

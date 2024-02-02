@@ -10,11 +10,19 @@ body{
     display: flex !important;
     position: absolute !important;
     top: 0%;
-    right: 3%;
+    right: 5%;
     flex-direction: column;
     height: 50%;
 }
 
 ::selection{
     background-color:rgb(142, 199, 216);
+}
+
+#big-card h5 {
+    text-decoration: none !important;
+    font-family: Rubik , sans-serif;
+    margin: auto;
+    text-align: center;
+    color: black;
 }
